@@ -51,7 +51,7 @@ namespace TPWinForm
             // string catArticle = comboBox2.SelectedItem.ToString();
             string priceArticle = txtArticlePrice.Text;
 
-            string datos = codArticle + nameArticle + descArticle + priceArticle;
+            string datos = codArticle + "  " + nameArticle + "  " + descArticle + "  " +  priceArticle;
 
             MessageBox.Show(datos);
         }

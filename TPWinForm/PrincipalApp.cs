@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using domain;
 
 namespace TPWinForm
 {
@@ -19,7 +20,9 @@ namespace TPWinForm
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+             Lista aux = new Lista();
+            dgvArticle.DataSource = aux.Listar();
+           
         }
 
         private void btnAddArticle_Click(object sender, EventArgs e)
@@ -38,6 +41,11 @@ namespace TPWinForm
         }
 
         private void Form1_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvArticle_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

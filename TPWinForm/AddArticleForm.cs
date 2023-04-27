@@ -41,5 +41,19 @@ namespace TPWinForm
         {
             this.Hide();
         }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            string codArticle = txtArticleCode.Text;
+            string nameArticle = txtArticleName.Text;
+            string descArticle = txtArticleDescription.Text;
+            // string branArticle = comboBox1.SelectedItem.ToString();
+            // string catArticle = comboBox2.SelectedItem.ToString();
+            string priceArticle = txtArticlePrice.Text;
+
+            string datos = codArticle + nameArticle + descArticle + priceArticle;
+
+            MessageBox.Show(datos);
+        }
     }
 }

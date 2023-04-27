@@ -43,7 +43,7 @@
             this.txtArticlePrice = new System.Windows.Forms.TextBox();
             this.labelPrice = new System.Windows.Forms.Label();
             this.pbxImages = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
             this.btnCancelAddArticle = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbxImages)).BeginInit();
@@ -125,11 +125,12 @@
             this.pbxImages.Name = "pbxImages";
             this.pbxImages.TabStop = false;
             // 
-            // button1
+            // btnSave
             // 
-            resources.ApplyResources(this.button1, "button1");
-            this.button1.Name = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.btnSave, "btnSave");
+            this.btnSave.Name = "btnSave";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnCancelAddArticle
             // 
@@ -149,7 +150,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnCancelAddArticle);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.pbxImages);
             this.Controls.Add(this.txtArticlePrice);
             this.Controls.Add(this.labelPrice);
@@ -188,7 +189,7 @@
         private System.Windows.Forms.TextBox txtArticlePrice;
         private System.Windows.Forms.Label labelPrice;
         private System.Windows.Forms.PictureBox pbxImages;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnCancelAddArticle;
         private System.Windows.Forms.Label label1;
     }

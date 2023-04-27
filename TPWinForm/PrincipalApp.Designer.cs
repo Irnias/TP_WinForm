@@ -33,7 +33,7 @@
             // 
             // btnAddArticle
             // 
-            this.btnAddArticle.Location = new System.Drawing.Point(104, 111);
+            this.btnAddArticle.Location = new System.Drawing.Point(26, 436);
             this.btnAddArticle.Name = "btnAddArticle";
             this.btnAddArticle.Size = new System.Drawing.Size(75, 23);
             this.btnAddArticle.TabIndex = 0;
@@ -43,9 +43,11 @@
             // 
             // PrincipalApp
             // 
-            this.ClientSize = new System.Drawing.Size(957, 488);
+            this.ClientSize = new System.Drawing.Size(494, 471);
             this.Controls.Add(this.btnAddArticle);
+            this.IsMdiContainer = true;
             this.Name = "PrincipalApp";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.Form1_Load_1);
             this.ResumeLayout(false);
 

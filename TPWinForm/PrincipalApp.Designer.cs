@@ -1,6 +1,6 @@
 ﻿namespace TPWinForm
 {
-    partial class Form1
+    partial class PrincipalApp
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -28,21 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.btnAddArticle = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // Form1
+            // btnAddArticle
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "Form1";
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.btnAddArticle.Location = new System.Drawing.Point(104, 111);
+            this.btnAddArticle.Name = "btnAddArticle";
+            this.btnAddArticle.Size = new System.Drawing.Size(75, 23);
+            this.btnAddArticle.TabIndex = 0;
+            this.btnAddArticle.Text = "Add Article";
+            this.btnAddArticle.UseVisualStyleBackColor = true;
+            this.btnAddArticle.Click += new System.EventHandler(this.btnAddArticle_Click);
+            // 
+            // PrincipalApp
+            // 
+            this.ClientSize = new System.Drawing.Size(957, 488);
+            this.Controls.Add(this.btnAddArticle);
+            this.Name = "PrincipalApp";
+            this.Load += new System.EventHandler(this.Form1_Load_1);
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Button btnAddArticle;
     }
 }
 

@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using core;
+using domain;
 
 namespace TPWinForm
 {
@@ -54,6 +49,15 @@ namespace TPWinForm
             string datos = codArticle + "  " + nameArticle + "  " + descArticle + "  " +  priceArticle;
 
             MessageBox.Show(datos);
+
+            DataHandler dataHandler = new DataHandler();
+            Article newArticle = new Article();
+
+            newArticle.Name = nameArticle;
+            newArticle.ArticleCode = codArticle;
+
+            dataHandler.addArticle()
+
         }
     }
 }

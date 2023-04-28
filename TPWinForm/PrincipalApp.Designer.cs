@@ -37,7 +37,7 @@
             // 
             this.btnAddArticle.BackColor = System.Drawing.Color.SkyBlue;
             this.btnAddArticle.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAddArticle.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddArticle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddArticle.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnAddArticle.Location = new System.Drawing.Point(26, 436);
             this.btnAddArticle.Name = "btnAddArticle";
@@ -50,9 +50,9 @@
             // dgvArticle
             // 
             this.dgvArticle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvArticle.Location = new System.Drawing.Point(12, 37);
+            this.dgvArticle.Location = new System.Drawing.Point(253, 2);
             this.dgvArticle.Name = "dgvArticle";
-            this.dgvArticle.Size = new System.Drawing.Size(462, 378);
+            this.dgvArticle.Size = new System.Drawing.Size(89, 30);
             this.dgvArticle.TabIndex = 2;
             this.dgvArticle.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvArticle_CellContentClick);
             // 

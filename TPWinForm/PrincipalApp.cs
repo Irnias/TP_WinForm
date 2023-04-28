@@ -20,8 +20,9 @@ namespace TPWinForm
 
         private void Form1_Load(object sender, EventArgs e)
         {
-             Lista aux = new Lista();
-            dgvArticle.DataSource = aux.Listar();
+            Lista aux = new Lista();
+            MessageBox.Show(aux.Listar().ToString());
+           // dgvArticle.DataSource = aux.Listar();
            
         }
 

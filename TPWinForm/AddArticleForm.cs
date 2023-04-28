@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Windows.Forms;
-using core;
 using domain;
 
 namespace TPWinForm
@@ -50,13 +49,13 @@ namespace TPWinForm
 
             MessageBox.Show(datos);
 
-            DataHandler dataHandler = new DataHandler();
-            Article newArticle = new Article();
+    //         DataHandler dataHandler = new DataHandler();
+    //        Article newArticle = new Article();
+    //
+    //        newArticle.Name = nameArticle;
+    //        newArticle.ArticleCode = codArticle;
 
-            newArticle.Name = nameArticle;
-            newArticle.ArticleCode = codArticle;
-
-            dataHandler.addArticle()
+    //        dataHandler.addArticle();
 
         }
     }

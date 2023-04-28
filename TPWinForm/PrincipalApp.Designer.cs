@@ -50,9 +50,9 @@
             // dgvArticle
             // 
             this.dgvArticle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvArticle.Location = new System.Drawing.Point(253, 2);
+            this.dgvArticle.Location = new System.Drawing.Point(66, 43);
             this.dgvArticle.Name = "dgvArticle";
-            this.dgvArticle.Size = new System.Drawing.Size(89, 30);
+            this.dgvArticle.Size = new System.Drawing.Size(351, 347);
             this.dgvArticle.TabIndex = 2;
             this.dgvArticle.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvArticle_CellContentClick);
             // 

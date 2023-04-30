@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Windows.Forms;
-using domain;
 
 namespace TPWinForm
 {
@@ -11,7 +10,7 @@ namespace TPWinForm
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void Label1_Click(object sender, EventArgs e)
         {
 
         }

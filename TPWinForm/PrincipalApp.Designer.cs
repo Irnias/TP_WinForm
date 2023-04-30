@@ -28,9 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PrincipalApp));
             this.btnAddArticle = new System.Windows.Forms.Button();
-            this.dgvArticle = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvArticle)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAddArticle
@@ -47,27 +46,21 @@
             this.btnAddArticle.UseVisualStyleBackColor = false;
             this.btnAddArticle.Click += new System.EventHandler(this.btnAddArticle_Click);
             // 
-            // dgvArticle
-            // 
-            this.dgvArticle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvArticle.Location = new System.Drawing.Point(66, 43);
-            this.dgvArticle.Name = "dgvArticle";
-            this.dgvArticle.Size = new System.Drawing.Size(351, 347);
-            this.dgvArticle.TabIndex = 2;
-            this.dgvArticle.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvArticle_CellContentClick);
-            // 
             // PrincipalApp
             // 
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(494, 471);
-            this.Controls.Add(this.dgvArticle);
             this.Controls.Add(this.btnAddArticle);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.MaximumSize = new System.Drawing.Size(510, 510);
             this.MinimumSize = new System.Drawing.Size(510, 510);
             this.Name = "PrincipalApp";
+            this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Load += new System.EventHandler(this.Form1_Load_1);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvArticle)).EndInit();
+            this.Text = "Administrador de Articulos";
+            this.Load += new System.EventHandler(this.LoadPrincipalApp);
             this.ResumeLayout(false);
 
         }
@@ -75,7 +68,6 @@
         #endregion
 
         private System.Windows.Forms.Button btnAddArticle;
-        private System.Windows.Forms.DataGridView dgvArticle;
     }
 }
 

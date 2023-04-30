@@ -123,7 +123,7 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="ArticleCode.Location" type="System.Drawing.Point, System.Drawing">
-    <value>102, 52</value>
+    <value>42, 48</value>
   </data>
   <data name="ArticleCode.Size" type="System.Drawing.Size, System.Drawing">
     <value>62, 13</value>
@@ -147,7 +147,7 @@
     <value>16</value>
   </data>
   <data name="txtArticleCode.Location" type="System.Drawing.Point, System.Drawing">
-    <value>170, 49</value>
+    <value>110, 45</value>
   </data>
   <data name="txtArticleCode.Size" type="System.Drawing.Size, System.Drawing">
     <value>121, 20</value>
@@ -168,7 +168,7 @@
     <value>15</value>
   </data>
   <data name="txtArticleName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>170, 75</value>
+    <value>110, 71</value>
   </data>
   <data name="txtArticleName.Size" type="System.Drawing.Size, System.Drawing">
     <value>121, 20</value>
@@ -196,7 +196,7 @@
     <value>NoControl</value>
   </data>
   <data name="ArticleName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>102, 78</value>
+    <value>42, 74</value>
   </data>
   <data name="ArticleName.Size" type="System.Drawing.Size, System.Drawing">
     <value>35, 13</value>
@@ -220,7 +220,7 @@
     <value>14</value>
   </data>
   <data name="txtArticleDescription.Location" type="System.Drawing.Point, System.Drawing">
-    <value>170, 101</value>
+    <value>110, 97</value>
   </data>
   <data name="txtArticleDescription.Size" type="System.Drawing.Size, System.Drawing">
     <value>121, 20</value>
@@ -247,7 +247,7 @@
     <value>NoControl</value>
   </data>
   <data name="Description.Location" type="System.Drawing.Point, System.Drawing">
-    <value>102, 104</value>
+    <value>42, 100</value>
   </data>
   <data name="Description.Size" type="System.Drawing.Size, System.Drawing">
     <value>60, 13</value>
@@ -277,7 +277,7 @@
     <value>NoControl</value>
   </data>
   <data name="labelBrand.Location" type="System.Drawing.Point, System.Drawing">
-    <value>103, 131</value>
+    <value>43, 127</value>
   </data>
   <data name="labelBrand.Size" type="System.Drawing.Size, System.Drawing">
     <value>35, 13</value>
@@ -307,7 +307,7 @@
     <value>NoControl</value>
   </data>
   <data name="labelImage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>103, 222</value>
+    <value>43, 218</value>
   </data>
   <data name="labelImage.Size" type="System.Drawing.Size, System.Drawing">
     <value>36, 13</value>
@@ -331,7 +331,7 @@
     <value>9</value>
   </data>
   <data name="comboBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>170, 128</value>
+    <value>110, 124</value>
   </data>
   <data name="comboBox1.Size" type="System.Drawing.Size, System.Drawing">
     <value>121, 21</value>
@@ -352,7 +352,7 @@
     <value>8</value>
   </data>
   <data name="comboBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>170, 154</value>
+    <value>110, 150</value>
   </data>
   <data name="comboBox2.Size" type="System.Drawing.Size, System.Drawing">
     <value>121, 21</value>
@@ -379,7 +379,7 @@
     <value>NoControl</value>
   </data>
   <data name="labelCategory.Location" type="System.Drawing.Point, System.Drawing">
-    <value>103, 157</value>
+    <value>43, 153</value>
   </data>
   <data name="labelCategory.Size" type="System.Drawing.Size, System.Drawing">
     <value>49, 13</value>
@@ -403,7 +403,7 @@
     <value>7</value>
   </data>
   <data name="txtArticlePrice.Location" type="System.Drawing.Point, System.Drawing">
-    <value>171, 276</value>
+    <value>111, 272</value>
   </data>
   <data name="txtArticlePrice.Size" type="System.Drawing.Size, System.Drawing">
     <value>121, 20</value>
@@ -430,7 +430,7 @@
     <value>NoControl</value>
   </data>
   <data name="labelPrice.Location" type="System.Drawing.Point, System.Drawing">
-    <value>103, 279</value>
+    <value>43, 275</value>
   </data>
   <data name="labelPrice.Size" type="System.Drawing.Size, System.Drawing">
     <value>31, 13</value>
@@ -454,7 +454,7 @@
     <value>5</value>
   </data>
   <data name="pbxImages.Location" type="System.Drawing.Point, System.Drawing">
-    <value>170, 181</value>
+    <value>110, 177</value>
   </data>
   <data name="pbxImages.Size" type="System.Drawing.Size, System.Drawing">
     <value>121, 89</value>
@@ -475,7 +475,7 @@
     <value>3</value>
   </data>
   <data name="btnSave.Location" type="System.Drawing.Point, System.Drawing">
-    <value>238, 323</value>
+    <value>178, 319</value>
   </data>
   <data name="btnSave.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
@@ -499,7 +499,7 @@
     <value>2</value>
   </data>
   <data name="btnCancelAddArticle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>89, 323</value>
+    <value>29, 319</value>
   </data>
   <data name="btnCancelAddArticle.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
@@ -525,17 +525,20 @@
   <data name="label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>96, 22</value>
+    <value>106, 9</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>217, 13</value>
+    <value>88, 20</value>
   </data>
   <data name="label1.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
-    <value>Complete all the fields to create a new article</value>
+    <value>New Article</value>
   </data>
   <data name="&gt;&gt;label1.Name" xml:space="preserve">
     <value>label1</value>
@@ -556,7 +559,7 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>416, 371</value>
+    <value>290, 363</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>

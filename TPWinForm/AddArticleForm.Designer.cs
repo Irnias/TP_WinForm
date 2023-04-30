@@ -53,7 +53,7 @@
             // 
             resources.ApplyResources(this.ArticleCode, "ArticleCode");
             this.ArticleCode.Name = "ArticleCode";
-            this.ArticleCode.Click += new System.EventHandler(this.label1_Click);
+            this.ArticleCode.Click += new System.EventHandler(this.Label1_Click);
             // 
             // txtArticleCode
             // 
@@ -165,7 +165,9 @@
             this.Controls.Add(this.ArticleName);
             this.Controls.Add(this.txtArticleCode);
             this.Controls.Add(this.ArticleCode);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AddArticleFom";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.AddArticle_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbxImages)).EndInit();
             this.ResumeLayout(false);

@@ -20,7 +20,7 @@ namespace domain
             {
                 connection.ConnectionString = "server=.\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true ";
                 command.CommandType = System.Data.CommandType.Text;
-                command.CommandText = "select Nombre FROM ARTICULOS";
+                command.CommandText = "select Codigo, Nombre, Descripcion FROM ARTICULOS";
                 command.Connection = connection;
 
                 connection.Open();
@@ -30,7 +30,9 @@ namespace domain
                 {
 
                     Article aux = new Article();
+                    //aux.ArticleCode = (string)reader["Codigo"];
                     aux.Name = (string)reader["Nombre"];
+                    aux.Description = (string)reader["Descripcion"];
 
                     Listas.Add(aux);
                 }

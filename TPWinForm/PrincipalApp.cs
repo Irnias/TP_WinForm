@@ -57,18 +57,14 @@ namespace TPWinForm
         private void btnAddArticle_Click(object sender, EventArgs e)
         {
             AddArticleFom newForm = new AddArticleFom();
-            newForm.MdiParent = this;
-            newForm.Show();
+           // newForm.MdiParent = this;
+            newForm.ShowDialog();
         }
 
         private void LoadPrincipalApp(object sender, EventArgs e)
         {
-
-        }
-
-        private void dgvArticle_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
+            Lista listas = new Lista();
+            dgvPrincipal.DataSource = listas.Listar();
         }
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)

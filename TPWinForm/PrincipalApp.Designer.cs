@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PrincipalApp));
             this.btnAddArticle = new System.Windows.Forms.Button();
+            this.dgvPrincipal = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPrincipal)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAddArticle
@@ -46,14 +48,22 @@
             this.btnAddArticle.UseVisualStyleBackColor = false;
             this.btnAddArticle.Click += new System.EventHandler(this.btnAddArticle_Click);
             // 
+            // dgvPrincipal
+            // 
+            this.dgvPrincipal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPrincipal.Location = new System.Drawing.Point(26, 44);
+            this.dgvPrincipal.Name = "dgvPrincipal";
+            this.dgvPrincipal.Size = new System.Drawing.Size(437, 282);
+            this.dgvPrincipal.TabIndex = 1;
+            // 
             // PrincipalApp
             // 
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(494, 471);
+            this.Controls.Add(this.dgvPrincipal);
             this.Controls.Add(this.btnAddArticle);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.IsMdiContainer = true;
             this.MaximumSize = new System.Drawing.Size(510, 510);
             this.MinimumSize = new System.Drawing.Size(510, 510);
             this.Name = "PrincipalApp";
@@ -61,6 +71,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Administrador de Articulos";
             this.Load += new System.EventHandler(this.LoadPrincipalApp);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPrincipal)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -68,6 +79,7 @@
         #endregion
 
         private System.Windows.Forms.Button btnAddArticle;
+        private System.Windows.Forms.DataGridView dgvPrincipal;
     }
 }
 

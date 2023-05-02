@@ -16,17 +16,23 @@ namespace domain
 
             try
             {
-                data.setQuery("select Codigo, Nombre, Descripcion FROM ARTICULOS");
+                data.setQuery("select Codigo, Nombre, art.Descripcion artDescrip, cat.Descripcion descrip, marc.Descripcion marca FROM Articulos art, CATEGORIAS cat, MARCAS marc where art.IdCategoria = cat.Id and marc.Id = art.IdMarca");
                 data.execute();
 
                 while (data.sqlReader.Read())
                 {
                     Article aux = new Article();
-                    //aux.ArticleCode = (string)reader["Codigo"];
                     aux.Name = (string)data.sqlReader["Nombre"];
-                    aux.Description = (string)data.sqlReader["Descripcion"];
+                    aux.Description = (string)data.sqlReader["artDescrip"];
+                    
+                    aux.ArticleCategory = new Category();
+                    aux.ArticleCategory.Description = (string)data.sqlReader["descrip"];
+                    
+                    aux.ArticleBrand = new Brand();
+                    aux.ArticleBrand.Description = (string)data.sqlReader["marca"];
+                    //aux.Description = (string)data.sqlReader["Descripcion"];
                     //aux.Image = (string)reader["https://images.samsung.com/is/image/samsung/co-galaxy-s10-sm-g970-sm-g970fzyjcoo-frontcanaryyellow-thumb-149016542"]
-
+              
                     Listas.Add(aux);
                 }
                 return Listas;

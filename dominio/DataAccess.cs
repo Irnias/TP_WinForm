@@ -38,6 +38,8 @@ namespace domain
             }
  
         }
+
+  
         public SqlDataReader sqlReader
         {
             get { return reader; }

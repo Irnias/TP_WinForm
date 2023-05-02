@@ -57,7 +57,6 @@ namespace TPWinForm
         private void btnAddArticle_Click(object sender, EventArgs e)
         {
             AddArticleFom newForm = new AddArticleFom();
-           // newForm.MdiParent = this;
             newForm.ShowDialog();
         }
 

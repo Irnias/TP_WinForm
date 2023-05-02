@@ -12,7 +12,7 @@ namespace TPWinForm
 
         private void Label1_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void AddArticle_Load(object sender, EventArgs e)
@@ -32,7 +32,7 @@ namespace TPWinForm
 
         private void btnCancellAddArticle(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
         }
 
         private void btnSave_Click(object sender, EventArgs e)

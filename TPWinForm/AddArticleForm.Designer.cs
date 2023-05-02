@@ -37,8 +37,8 @@
             this.Description = new System.Windows.Forms.Label();
             this.labelBrand = new System.Windows.Forms.Label();
             this.labelImage = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cboBrand = new System.Windows.Forms.ComboBox();
+            this.cboCategory = new System.Windows.Forms.ComboBox();
             this.labelCategory = new System.Windows.Forms.Label();
             this.txtArticlePrice = new System.Windows.Forms.TextBox();
             this.labelPrice = new System.Windows.Forms.Label();
@@ -92,17 +92,17 @@
             this.labelImage.Name = "labelImage";
             this.labelImage.Click += new System.EventHandler(this.labelImage_Click);
             // 
-            // comboBox1
+            // cboBrand
             // 
-            this.comboBox1.FormattingEnabled = true;
-            resources.ApplyResources(this.comboBox1, "comboBox1");
-            this.comboBox1.Name = "comboBox1";
+            this.cboBrand.FormattingEnabled = true;
+            resources.ApplyResources(this.cboBrand, "cboBrand");
+            this.cboBrand.Name = "cboBrand";
             // 
-            // comboBox2
+            // cboCategory
             // 
-            this.comboBox2.FormattingEnabled = true;
-            resources.ApplyResources(this.comboBox2, "comboBox2");
-            this.comboBox2.Name = "comboBox2";
+            this.cboCategory.FormattingEnabled = true;
+            resources.ApplyResources(this.cboCategory, "cboCategory");
+            this.cboCategory.Name = "cboCategory";
             // 
             // labelCategory
             // 
@@ -154,9 +154,9 @@
             this.Controls.Add(this.pbxImages);
             this.Controls.Add(this.txtArticlePrice);
             this.Controls.Add(this.labelPrice);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.cboCategory);
             this.Controls.Add(this.labelCategory);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cboBrand);
             this.Controls.Add(this.labelImage);
             this.Controls.Add(this.labelBrand);
             this.Controls.Add(this.txtArticleDescription);
@@ -185,8 +185,8 @@
         private System.Windows.Forms.Label Description;
         private System.Windows.Forms.Label labelBrand;
         private System.Windows.Forms.Label labelImage;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cboBrand;
+        private System.Windows.Forms.ComboBox cboCategory;
         private System.Windows.Forms.Label labelCategory;
         private System.Windows.Forms.TextBox txtArticlePrice;
         private System.Windows.Forms.Label labelPrice;

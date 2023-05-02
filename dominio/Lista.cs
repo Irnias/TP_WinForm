@@ -12,39 +12,34 @@ namespace domain
         public List<Article> Listar()
         {
             List<Article> Listas = new List<Article>();
-            SqlConnection connection = new SqlConnection();
-            SqlCommand command = new SqlCommand();
-            SqlDataReader reader;
+            DataAccess data = new DataAccess();
 
             try
             {
-                connection.ConnectionString = "server=.\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true ";
-                command.CommandType = System.Data.CommandType.Text;
-                command.CommandText = "select Codigo, Nombre, Descripcion FROM ARTICULOS";
-                command.Connection = connection;
+                data.setQuery("select Codigo, Nombre, Descripcion FROM ARTICULOS");
+                data.execute();
 
-                connection.Open();
-                reader = command.ExecuteReader();
-
-                while (reader.Read())
+                while (data.sqlReader.Read())
                 {
-
                     Article aux = new Article();
                     //aux.ArticleCode = (string)reader["Codigo"];
-                    aux.Name = (string)reader["Nombre"];
-                    aux.Description = (string)reader["Descripcion"];
+                    aux.Name = (string)data.sqlReader["Nombre"];
+                    aux.Description = (string)data.sqlReader["Descripcion"];
+                    //aux.Image = (string)reader["https://images.samsung.com/is/image/samsung/co-galaxy-s10-sm-g970-sm-g970fzyjcoo-frontcanaryyellow-thumb-149016542"]
 
                     Listas.Add(aux);
                 }
-                connection.Close();
                 return Listas;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
-                throw;
+                throw ex;
             }
-
+            finally
+            {
+                data.close();
+            }
         }
     }
 }

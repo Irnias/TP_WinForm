@@ -45,6 +45,7 @@
     <Compile Include="Article.cs" />
     <Compile Include="Brand.cs" />
     <Compile Include="Category.cs" />
+    <Compile Include="DataAccess.cs" />
     <Compile Include="Lista.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

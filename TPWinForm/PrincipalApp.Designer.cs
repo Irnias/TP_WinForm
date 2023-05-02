@@ -51,9 +51,9 @@
             // dgvPrincipal
             // 
             this.dgvPrincipal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPrincipal.Location = new System.Drawing.Point(26, 44);
+            this.dgvPrincipal.Location = new System.Drawing.Point(26, 24);
             this.dgvPrincipal.Name = "dgvPrincipal";
-            this.dgvPrincipal.Size = new System.Drawing.Size(437, 282);
+            this.dgvPrincipal.Size = new System.Drawing.Size(427, 172);
             this.dgvPrincipal.TabIndex = 1;
             // 
             // PrincipalApp

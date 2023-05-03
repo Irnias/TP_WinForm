@@ -24,14 +24,16 @@ namespace domain
                     Article aux = new Article();
                     aux.Name = (string)data.sqlReader["Nombre"];
                     aux.Description = (string)data.sqlReader["artDescrip"];
-                    
+                    aux.ArticleCode = (string)data.sqlReader["Codigo"];
+               
                     aux.ArticleCategory = new Category();
                     aux.ArticleCategory.Description = (string)data.sqlReader["descrip"];
                     
                     aux.ArticleBrand = new Brand();
                     aux.ArticleBrand.Description = (string)data.sqlReader["marca"];
-                    //aux.Description = (string)data.sqlReader["Descripcion"];
-                    //aux.Image = (string)reader["https://images.samsung.com/is/image/samsung/co-galaxy-s10-sm-g970-sm-g970fzyjcoo-frontcanaryyellow-thumb-149016542"]
+
+                    aux.ArticleImage = new Image();
+                   // aux.ArticleImage.ArtImage = (string)data.sqlReader["https://images.samsung.com/is/image/samsung/co-galaxy-s10-sm-g970-sm-g970fzyjcoo-frontcanaryyellow-thumb-149016542"]
               
                     Listas.Add(aux);
                 }

@@ -26,13 +26,13 @@ namespace TPWinForm
             List<Article> ArticlesList = new List<Article>();
             Article aux = new Article();
 
-            aux.ArticleCode = getRandom.Next(100, 999);
+            //aux.ArticleCode = getRandom.Next(100, 999);
             aux.Name = "Apple 14";
             aux.Description = "Telefono de ultima generacion";
             aux.ArticleBrand = buildDummyBrand();
             aux.ArticleCategory = buildDummyCategory();
             aux.Image = "url";
-            aux.Price = getRandom.Next(1000, 9999);
+            //aux.Price = getRandom.Next(1000, 9999);
             ArticlesList.Add(aux);
             return ArticlesList;
 

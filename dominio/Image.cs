@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace domain
 {
-    class Image
+    public class Image
     {
+        public int idArticle { get; set; }
+        public string ArtImage { get; set; }
     }
 }

@@ -16,12 +16,15 @@ namespace TPWinForm
     {
         private static readonly Random getRandom = new Random();
 
+        private List<Article> listArticle;
+    
+
         public PrincipalApp()
         {
             InitializeComponent();
         }
 
-        private List<Article> GetInitialValues()
+        /*private List<Article> GetInitialValues()
         {
             List<Article> ArticlesList = new List<Article>();
             Article aux = new Article();
@@ -52,7 +55,7 @@ namespace TPWinForm
             category.Id = getRandom.Next(1000, 9999);
             category.Name = "Celphone";
             return category;
-        }
+        }*/
 
         private void btnAddArticle_Click(object sender, EventArgs e)
         {
@@ -63,10 +66,19 @@ namespace TPWinForm
         private void LoadPrincipalApp(object sender, EventArgs e)
         {
             Lista listas = new Lista();
-            dgvPrincipal.DataSource = listas.Listar();
+            listArticle = listas.Listar();
+            dgvPrincipal.DataSource = listArticle;
+            //dgvPrincipal.Columns["Image"].Visible=false;
+            //pbxArticle.Load(listArticle[0].ArticleImage);
+
         }
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pbxArticle_Click(object sender, EventArgs e)
         {
 
         }

@@ -16,24 +16,25 @@ namespace domain
 
             try
             {
-                data.setQuery("select Codigo, Nombre, art.Descripcion artDescrip, cat.Descripcion descrip, marc.Descripcion marca FROM Articulos art, CATEGORIAS cat, MARCAS marc where art.IdCategoria = cat.Id and marc.Id = art.IdMarca");
+                data.setQuery("select art.Id ArtId, Codigo, Nombre, Descripcion artDescrip, imagenUrl imagen FROM Articulos art, IMAGENES img where art.Id = img.IdArticulo");
                 data.execute();
 
                 while (data.sqlReader.Read())
                 {
                     Article aux = new Article();
+                    aux.ArticleId = (int)data.sqlReader["ArtId"];
                     aux.Name = (string)data.sqlReader["Nombre"];
                     aux.Description = (string)data.sqlReader["artDescrip"];
                     aux.ArticleCode = (string)data.sqlReader["Codigo"];
                
-                    aux.ArticleCategory = new Category();
-                    aux.ArticleCategory.Description = (string)data.sqlReader["descrip"];
+                    //aux.ArticleCategory = new Category();
+                    //aux.ArticleCategory.Description = (string)data.sqlReader["descrip"];
                     
-                    aux.ArticleBrand = new Brand();
-                    aux.ArticleBrand.Description = (string)data.sqlReader["marca"];
+                    //aux.ArticleBrand = new Brand();
+                    //aux.ArticleBrand.Description = (string)data.sqlReader["marca"];
 
                     aux.ArticleImage = new Image();
-                   // aux.ArticleImage.ArtImage = (string)data.sqlReader["https://images.samsung.com/is/image/samsung/co-galaxy-s10-sm-g970-sm-g970fzyjcoo-frontcanaryyellow-thumb-149016542"]
+                    aux.ArticleImage.ArtImage = (string)data.sqlReader["imagen"];
               
                     Listas.Add(aux);
                 }

@@ -124,6 +124,7 @@
             resources.ApplyResources(this.pbxImages, "pbxImages");
             this.pbxImages.Name = "pbxImages";
             this.pbxImages.TabStop = false;
+            this.pbxImages.Click += new System.EventHandler(this.pbxImages_Click);
             // 
             // btnSave
             // 

@@ -31,7 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PrincipalApp));
             this.btnAddArticle = new System.Windows.Forms.Button();
             this.dgvPrincipal = new System.Windows.Forms.DataGridView();
+            this.pbxArticle = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrincipal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxArticle)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAddArticle
@@ -56,11 +58,22 @@
             this.dgvPrincipal.Size = new System.Drawing.Size(427, 172);
             this.dgvPrincipal.TabIndex = 1;
             // 
+            // pbxArticle
+            // 
+            this.pbxArticle.BackColor = System.Drawing.Color.White;
+            this.pbxArticle.Location = new System.Drawing.Point(127, 227);
+            this.pbxArticle.Name = "pbxArticle";
+            this.pbxArticle.Size = new System.Drawing.Size(215, 175);
+            this.pbxArticle.TabIndex = 2;
+            this.pbxArticle.TabStop = false;
+            this.pbxArticle.Click += new System.EventHandler(this.pbxArticle_Click);
+            // 
             // PrincipalApp
             // 
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(494, 471);
+            this.Controls.Add(this.pbxArticle);
             this.Controls.Add(this.dgvPrincipal);
             this.Controls.Add(this.btnAddArticle);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -72,6 +85,7 @@
             this.Text = "Administrador de Articulos";
             this.Load += new System.EventHandler(this.LoadPrincipalApp);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrincipal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxArticle)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -80,6 +94,7 @@
 
         private System.Windows.Forms.Button btnAddArticle;
         private System.Windows.Forms.DataGridView dgvPrincipal;
+        private System.Windows.Forms.PictureBox pbxArticle;
     }
 }
 

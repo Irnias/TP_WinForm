@@ -10,5 +10,9 @@ namespace domain
     {
         public int idArticle { get; set; }
         public string ArtImage { get; set; }
+        public override string ToString()
+        {
+            return ArtImage;
+        }
     }
 }

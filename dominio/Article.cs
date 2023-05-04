@@ -5,6 +5,7 @@ namespace domain
 {
     public class Article
     {   
+        public int ArticleId { get; set; }
         [DisplayName("Code")]
         public string ArticleCode { get; set; }
         public string Name { get; set; }

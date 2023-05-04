@@ -94,15 +94,19 @@
             // 
             // cboBrand
             // 
+            this.cboBrand.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboBrand.FormattingEnabled = true;
             resources.ApplyResources(this.cboBrand, "cboBrand");
             this.cboBrand.Name = "cboBrand";
+            this.cboBrand.SelectedIndexChanged += new System.EventHandler(this.cboBrand_SelectedIndexChanged);
             // 
             // cboCategory
             // 
+            this.cboCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboCategory.FormattingEnabled = true;
             resources.ApplyResources(this.cboCategory, "cboCategory");
             this.cboCategory.Name = "cboCategory";
+            this.cboCategory.SelectedIndexChanged += new System.EventHandler(this.cboCategory_SelectedIndexChanged);
             // 
             // labelCategory
             // 

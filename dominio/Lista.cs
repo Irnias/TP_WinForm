@@ -27,10 +27,10 @@ namespace domain
                     aux.Description = (string)data.sqlReader["artDescrip"];
                     aux.ArticleCode = (string)data.sqlReader["Codigo"];
                
-                    //aux.ArticleCategory = new Category();
+                   // aux.ArticleCategory = new Category();
                     //aux.ArticleCategory.Description = (string)data.sqlReader["descrip"];
                     
-                    //aux.ArticleBrand = new Brand();
+                   // aux.ArticleBrand = new Brand();
                     //aux.ArticleBrand.Description = (string)data.sqlReader["marca"];
 
                     aux.ArticleImage = new Image();

@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.33423.256
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33530.505
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPWinForm", "TPWinForm.csproj", "{507595B0-9AEF-4049-81A3-1B65A72EFE5A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "domain", "..\dominio\domain.csproj", "{74E0B4E2-1F06-4B00-97BA-C831A5832DAD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "commerce", "..\commerce\commerce.csproj", "{F79443E0-2616-47DF-BB8D-F2603FEB9924}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{74E0B4E2-1F06-4B00-97BA-C831A5832DAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{74E0B4E2-1F06-4B00-97BA-C831A5832DAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{74E0B4E2-1F06-4B00-97BA-C831A5832DAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F79443E0-2616-47DF-BB8D-F2603FEB9924}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F79443E0-2616-47DF-BB8D-F2603FEB9924}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F79443E0-2616-47DF-BB8D-F2603FEB9924}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F79443E0-2616-47DF-BB8D-F2603FEB9924}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>TPWinForm</RootNamespace>
     <AssemblyName>TPWinForm</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
@@ -91,6 +91,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\commerce\commerce.csproj">
+      <Project>{f79443e0-2616-47df-bb8d-f2603feb9924}</Project>
+      <Name>commerce</Name>
+    </ProjectReference>
     <ProjectReference Include="..\dominio\domain.csproj">
       <Project>{74e0b4e2-1f06-4b00-97ba-c831a5832dad}</Project>
       <Name>domain</Name>

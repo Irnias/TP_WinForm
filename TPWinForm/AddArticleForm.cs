@@ -1,4 +1,5 @@
-﻿using System;
+﻿using domain;
+using System;
 using System.Windows.Forms;
 
 namespace TPWinForm
@@ -61,6 +62,25 @@ namespace TPWinForm
         private void pbxImages_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void cboBrand_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Lista brand = new Lista();
+            try
+            {
+                cboBrand.DataSource = Brand.Listar();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void cboCategory_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Lista categor
         }
     }
 }

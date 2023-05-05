@@ -12,7 +12,7 @@ namespace domain
 
             try
             {
-                data.setQuery("select art.Id ArtId, Codigo, Nombre, art.Descripcion artDescrip, imagenUrl imagen, m.Descripcion brand, m.Id brandId, c.Descripcion category, c.Id categoryId FROM Articulos art, IMAGENES img, CATEGORIAS c, MARCAS m where art.Id = img.IdArticulo and art.IdMarca = m.Id and art.IdCategoria = c.Id ");
+                data.setQuery("select art.Id artId, Codigo, Nombre, art.Descripcion artDescrip, imagenUrl imagen, m.Descripcion brand, m.Id brandId, c.Descripcion category, c.Id categoryId FROM Articulos art, IMAGENES img, CATEGORIAS c, MARCAS m where art.Id = img.IdArticulo and art.IdMarca = m.Id and art.IdCategoria = c.Id ");
                 data.execute();
 
                 while (data.sqlReader.Read())

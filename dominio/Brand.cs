@@ -5,6 +5,10 @@ namespace domain
 {
     public class Brand
     {
+        public Brand()
+        {
+
+        }
         public Brand(int id, string description)
         {
             Id = id;

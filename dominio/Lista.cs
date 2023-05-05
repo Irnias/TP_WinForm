@@ -1,9 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Data.SqlClient;
 
 namespace domain
 {
@@ -11,12 +7,12 @@ namespace domain
     {
         public List<Article> Listar()
         {
-            List<Article> Listas = new List<Article>();
+            List<Article> ArticlesList = new List<Article>();
             DataAccess data = new DataAccess();
 
             try
             {
-                data.setQuery("select art.Id ArtId, Codigo, Nombre, Descripcion artDescrip, imagenUrl imagen FROM Articulos art, IMAGENES img where art.Id = img.IdArticulo");
+                data.setQuery("select art.Id ArtId, Codigo, Nombre, art.Descripcion artDescrip, imagenUrl imagen, m.Descripcion brand, m.Id brandId, c.Descripcion category, c.Id categoryId FROM Articulos art, IMAGENES img, CATEGORIAS c, MARCAS m where art.Id = img.IdArticulo and art.IdMarca = m.Id and art.IdCategoria = c.Id ");
                 data.execute();
 
                 while (data.sqlReader.Read())
@@ -27,16 +23,12 @@ namespace domain
                     aux.Description = (string)data.sqlReader["artDescrip"];
                     aux.ArticleCode = (string)data.sqlReader["Codigo"];
                     aux.Image = (string)data.sqlReader["imagen"];
-               
-                   // aux.ArticleCategory = new Category();
-                    //aux.ArticleCategory.Description = (string)data.sqlReader["descrip"];
-                    
-                   // aux.ArticleBrand = new Brand();
-                    //aux.ArticleBrand.Description = (string)data.sqlReader["marca"];
+                    aux.ArticleCategory = new Category((int)(data.sqlReader["categoryId"]),(string)data.sqlReader["category"]);
+                    aux.ArticleBrand = new Brand((int)data.sqlReader["brandId"], (string)data.sqlReader["brand"]);
               
-                    Listas.Add(aux);
+                    ArticlesList.Add(aux);
                 }
-                return Listas;
+                return ArticlesList;
             }
             catch (Exception ex)
             {
@@ -64,6 +56,7 @@ namespace domain
             }
             finally
             {
+                Listar();
                 acces.close();
             }
         }

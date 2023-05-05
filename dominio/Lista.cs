@@ -26,15 +26,13 @@ namespace domain
                     aux.Name = (string)data.sqlReader["Nombre"];
                     aux.Description = (string)data.sqlReader["artDescrip"];
                     aux.ArticleCode = (string)data.sqlReader["Codigo"];
+                    aux.Image = (string)data.sqlReader["imagen"];
                
                    // aux.ArticleCategory = new Category();
                     //aux.ArticleCategory.Description = (string)data.sqlReader["descrip"];
                     
                    // aux.ArticleBrand = new Brand();
                     //aux.ArticleBrand.Description = (string)data.sqlReader["marca"];
-
-                    aux.ArticleImage = new Image();
-                    aux.ArticleImage.ArtImage = (string)data.sqlReader["imagen"];
               
                     Listas.Add(aux);
                 }
@@ -50,6 +48,27 @@ namespace domain
                 data.close();
             }
         }
+        public void Add(Article Nuevo)
+        {
+            DataAccess acces = new DataAccess();
+
+            try
+            {
+                acces.setQuery("INSERT INTO ARTICULOS (Nombre, Descripcion) values('" + Nuevo.Name + "', '" + Nuevo.Description + "')");
+                acces.executeAction();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                acces.close();
+            }
+        }
     }
+
+    
 }
 

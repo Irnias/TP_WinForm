@@ -69,7 +69,7 @@ namespace TPWinForm
             listArticle = listas.Listar();
             dgvPrincipal.DataSource = listArticle;
             //dgvPrincipal.Columns["Image"].Visible=false;
-            //pbxArticle.Load(listArticle[0].ArticleImage);
+            pbxArticle.Load(listArticle[0].Image);
 
         }
 

@@ -64,6 +64,7 @@
             this.pbxArticle.Location = new System.Drawing.Point(127, 227);
             this.pbxArticle.Name = "pbxArticle";
             this.pbxArticle.Size = new System.Drawing.Size(215, 175);
+            this.pbxArticle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxArticle.TabIndex = 2;
             this.pbxArticle.TabStop = false;
             this.pbxArticle.Click += new System.EventHandler(this.pbxArticle_Click);

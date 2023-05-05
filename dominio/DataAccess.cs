@@ -44,6 +44,21 @@ namespace domain
         {
             get { return reader; }
         }
+        public void executeAction()
+        {
+            command.Connection = connection;
+
+            try
+            {
+                connection.Open();
+                command.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
 
         public void close()
         {

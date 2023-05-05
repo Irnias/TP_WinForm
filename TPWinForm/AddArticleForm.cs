@@ -38,24 +38,23 @@ namespace TPWinForm
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            string codArticle = txtArticleCode.Text;
-            string nameArticle = txtArticleName.Text;
-            string descArticle = txtArticleDescription.Text;
-            // string branArticle = comboBox1.SelectedItem.ToString();
-            // string catArticle = comboBox2.SelectedItem.ToString();
-            string priceArticle = txtArticlePrice.Text;
+            Article newArt = new Article();
+            Lista newList = new Lista();
 
-            string datos = codArticle + "  " + nameArticle + "  " + descArticle + "  " +  priceArticle;
+            try
+            {
+                newArt.Name = txtArticleName.Text;
+                newArt.Description = txtArticleDescription.Text;
 
-            MessageBox.Show(datos);
+                newList.Add(newArt);
+                MessageBox.Show("se agrego");
+                Close();
+            }
+            catch (Exception ex)
+            {
 
-    //         DataHandler dataHandler = new DataHandler();
-    //        Article newArticle = new Article();
-    //
-    //        newArticle.Name = nameArticle;
-    //        newArticle.ArticleCode = codArticle;
-
-    //        dataHandler.addArticle();
+                throw ex;
+            }
 
         }
 
@@ -69,7 +68,7 @@ namespace TPWinForm
             Lista brand = new Lista();
             try
             {
-                cboBrand.DataSource = Brand.Listar();
+                //cboBrand.DataSource = Brand.Listar();
             }
             catch (Exception ex)
             {
@@ -80,7 +79,7 @@ namespace TPWinForm
 
         private void cboCategory_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Lista categor
+            //Lista categor;
         }
     }
 }

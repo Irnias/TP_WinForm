@@ -4,37 +4,37 @@ using System.Collections.Generic;
 namespace domain
 {
 
-    public List<Brand>Listar()
-    {
-        List<Brand> Listas = new List<Brand>();
-        DataAccess data = new DataAccess();
-        try
+    /*public List<Brand>Listar()
         {
-            data.setQuery("");
-            data.execute();
-
-            while (data.sqlReader.Read())
+            List<Brand> Listas = new List<Brand>();
+            DataAccess data = new DataAccess();
+            try
             {
-                Brand aux = new Brand();
-                aux.Id = (int)data.sqlReader["Id"];
-                aux.Name = (string)data.sqlReader["Nombre"];
-                aux.Description = (string)data.sqlReader["Descrip"];
-                
-              
-                Listas.Add(aux);
-            }
-            return Listas;
-        }
-        catch (Exception ex)
-        {
+                data.setQuery("");
+                data.execute();
 
-            throw ex;
-        }
-        finally
-        {
-            data.close();
-        }
-    }
+                while (data.sqlReader.Read())
+                {
+                    Brand aux = new Brand();
+                    aux.Id = (int)data.sqlReader["Id"];
+                    aux.Name = (string)data.sqlReader["Nombre"];
+                    aux.Description = (string)data.sqlReader["Descrip"];
+
+
+                    Listas.Add(aux);
+                }
+                return Listas;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                data.close();
+            }
+        }*/
     public class Brand
     {
 
@@ -46,5 +46,6 @@ namespace domain
         {
             return Description;
         }
+
     }
 }

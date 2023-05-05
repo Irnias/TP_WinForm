@@ -34,8 +34,6 @@ namespace TPWinForm
         {
             Article seleccionado = (Article)dgvPrincipal.CurrentRow.DataBoundItem;
             cargarImagen(seleccionado.Image);
-
-
         }
 
         private void cargarImagen(string image)

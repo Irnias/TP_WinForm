@@ -9,6 +9,7 @@ namespace domain
         {
 
         }
+
         public Brand(int id, string description)
         {
             Id = id;

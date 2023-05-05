@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>domain</RootNamespace>
     <AssemblyName>domain</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
     <TargetFrameworkProfile />
@@ -49,20 +49,10 @@
     <Compile Include="Article.cs" />
     <Compile Include="Brand.cs" />
     <Compile Include="Category.cs" />
-    <Compile Include="DataAccess.cs" />
-    <Compile Include="Image.cs" />
-    <Compile Include="Lista.cs" />
-    <Compile Include="ListaDesplegables.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\commerce\commerce.csproj">
-      <Project>{f79443e0-2616-47df-bb8d-f2603feb9924}</Project>
-      <Name>commerce</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

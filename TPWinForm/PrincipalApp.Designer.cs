@@ -57,6 +57,7 @@
             this.dgvPrincipal.Name = "dgvPrincipal";
             this.dgvPrincipal.Size = new System.Drawing.Size(427, 172);
             this.dgvPrincipal.TabIndex = 1;
+            this.dgvPrincipal.SelectionChanged += new System.EventHandler(this.dgvPrincipal_SelectionChanged);
             // 
             // pbxArticle
             // 

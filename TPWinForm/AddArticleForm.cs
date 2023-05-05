@@ -72,7 +72,7 @@ namespace TPWinForm
             catch (Exception ex)
             {
 
-                pbxImages.Load("https://static.wikia.nocookie.net/videojuego/images/9/9c/Imagen_no_disponible-0.png/revision/latest/thumbnail/width/360/height/360?cb=20170910134200")
+                pbxImages.Load("https://static.wikia.nocookie.net/videojuego/images/9/9c/Imagen_no_disponible-0.png/revision/latest/thumbnail/width/360/height/360?cb=20170910134200");
             }
         }
 
@@ -93,6 +93,11 @@ namespace TPWinForm
         private void cboCategory_SelectedIndexChanged(object sender, EventArgs e)
         {
             //Lista categor;
+        }
+
+        private void txtUrlImage_Leave(object sender, EventArgs e)
+        {
+
         }
     }
 }

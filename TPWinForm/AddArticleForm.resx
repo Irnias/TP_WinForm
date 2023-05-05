@@ -144,7 +144,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;ArticleCode.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>17</value>
   </data>
   <data name="txtArticleCode.Location" type="System.Drawing.Point, System.Drawing">
     <value>110, 45</value>
@@ -153,7 +153,7 @@
     <value>121, 20</value>
   </data>
   <data name="txtArticleCode.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+    <value>0</value>
   </data>
   <data name="&gt;&gt;txtArticleCode.Name" xml:space="preserve">
     <value>txtArticleCode</value>
@@ -165,7 +165,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;txtArticleCode.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>16</value>
   </data>
   <data name="txtArticleName.Location" type="System.Drawing.Point, System.Drawing">
     <value>110, 71</value>
@@ -174,7 +174,7 @@
     <value>121, 20</value>
   </data>
   <data name="txtArticleName.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+    <value>1</value>
   </data>
   <data name="&gt;&gt;txtArticleName.Name" xml:space="preserve">
     <value>txtArticleName</value>
@@ -186,7 +186,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;txtArticleName.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>14</value>
   </data>
   <data name="ArticleName.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -217,7 +217,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;ArticleName.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>15</value>
   </data>
   <data name="txtArticleDescription.Location" type="System.Drawing.Point, System.Drawing">
     <value>110, 97</value>
@@ -226,7 +226,7 @@
     <value>121, 20</value>
   </data>
   <data name="txtArticleDescription.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>2</value>
   </data>
   <data name="&gt;&gt;txtArticleDescription.Name" xml:space="preserve">
     <value>txtArticleDescription</value>
@@ -238,7 +238,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;txtArticleDescription.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="Description.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -268,7 +268,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Description.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>13</value>
   </data>
   <data name="labelBrand.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -298,7 +298,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;labelBrand.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="labelImage.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -307,7 +307,7 @@
     <value>NoControl</value>
   </data>
   <data name="labelImage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>43, 218</value>
+    <value>43, 186</value>
   </data>
   <data name="labelImage.Size" type="System.Drawing.Size, System.Drawing">
     <value>36, 13</value>
@@ -328,7 +328,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;labelImage.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="cboBrand.Location" type="System.Drawing.Point, System.Drawing">
     <value>110, 124</value>
@@ -337,7 +337,7 @@
     <value>121, 21</value>
   </data>
   <data name="cboBrand.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
+    <value>3</value>
   </data>
   <data name="&gt;&gt;cboBrand.Name" xml:space="preserve">
     <value>cboBrand</value>
@@ -349,7 +349,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;cboBrand.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="cboCategory.Location" type="System.Drawing.Point, System.Drawing">
     <value>110, 150</value>
@@ -358,7 +358,7 @@
     <value>121, 21</value>
   </data>
   <data name="cboCategory.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
+    <value>4</value>
   </data>
   <data name="&gt;&gt;cboCategory.Name" xml:space="preserve">
     <value>cboCategory</value>
@@ -370,7 +370,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;cboCategory.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="labelCategory.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -400,16 +400,16 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;labelCategory.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="txtArticlePrice.Location" type="System.Drawing.Point, System.Drawing">
-    <value>111, 272</value>
+    <value>110, 215</value>
   </data>
   <data name="txtArticlePrice.Size" type="System.Drawing.Size, System.Drawing">
     <value>121, 20</value>
   </data>
   <data name="txtArticlePrice.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
+    <value>6</value>
   </data>
   <data name="&gt;&gt;txtArticlePrice.Name" xml:space="preserve">
     <value>txtArticlePrice</value>
@@ -421,7 +421,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;txtArticlePrice.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="labelPrice.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -430,7 +430,7 @@
     <value>NoControl</value>
   </data>
   <data name="labelPrice.Location" type="System.Drawing.Point, System.Drawing">
-    <value>43, 275</value>
+    <value>42, 218</value>
   </data>
   <data name="labelPrice.Size" type="System.Drawing.Size, System.Drawing">
     <value>31, 13</value>
@@ -451,16 +451,19 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;labelPrice.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="pbxImages.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="pbxImages.Location" type="System.Drawing.Point, System.Drawing">
-    <value>110, 177</value>
+    <value>259, 48</value>
   </data>
   <data name="pbxImages.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 89</value>
+    <value>196, 183</value>
+  </data>
+  <data name="pbxImages.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
   </data>
   <data name="pbxImages.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
@@ -475,16 +478,16 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pbxImages.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="btnSave.Location" type="System.Drawing.Point, System.Drawing">
-    <value>178, 319</value>
+    <value>156, 255</value>
   </data>
   <data name="btnSave.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
   </data>
   <data name="btnSave.TabIndex" type="System.Int32, mscorlib">
-    <value>17</value>
+    <value>7</value>
   </data>
   <data name="btnSave.Text" xml:space="preserve">
     <value>Save</value>
@@ -499,16 +502,16 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnSave.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="btnCancelAddArticle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>29, 319</value>
+    <value>45, 255</value>
   </data>
   <data name="btnCancelAddArticle.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
   </data>
   <data name="btnCancelAddArticle.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
+    <value>8</value>
   </data>
   <data name="btnCancelAddArticle.Text" xml:space="preserve">
     <value>Cancel</value>
@@ -523,7 +526,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnCancelAddArticle.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -532,7 +535,7 @@
     <value>Microsoft Sans Serif, 12pt</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>106, 9</value>
+    <value>180, 9</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>88, 20</value>
@@ -553,6 +556,27 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="txtUrlImage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>110, 183</value>
+  </data>
+  <data name="txtUrlImage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 20</value>
+  </data>
+  <data name="txtUrlImage.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;txtUrlImage.Name" xml:space="preserve">
+    <value>txtUrlImage</value>
+  </data>
+  <data name="&gt;&gt;txtUrlImage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtUrlImage.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;txtUrlImage.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -562,13 +586,10 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>290, 363</value>
+    <value>483, 298</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Add Article</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>AddArticleFom</value>

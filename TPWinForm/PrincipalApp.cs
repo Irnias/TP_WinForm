@@ -27,7 +27,29 @@ namespace TPWinForm
             listArticle = listas.Listar();
             dgvPrincipal.DataSource = listArticle;
             //dgvPrincipal.Columns["Image"].Visible=false;
-            pbxArticle.Load(listArticle[0].Image);
+            cargarImagen(listArticle[0].Image);
+
+        }
+        private void dgvPrincipal_SelectionChanged(object sender, EventArgs e)
+        {
+            Article seleccionado = (Article)dgvPrincipal.CurrentRow.DataBoundItem;
+            cargarImagen(seleccionado.Image);
+
+
+        }
+
+        private void cargarImagen(string image)
+        {
+            try
+            {
+                pbxArticle.Load(image);
+            }
+            catch (Exception)
+            {
+
+                pbxArticle.Load("https://static.wikia.nocookie.net/videojuego/images/9/9c/Imagen_no_disponible-0.png/revision/latest/thumbnail/width/360/height/360?cb=20170910134200");
+            }
+           
 
         }
 
@@ -40,5 +62,7 @@ namespace TPWinForm
         {
 
         }
+
+ 
     }
 }

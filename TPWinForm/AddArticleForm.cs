@@ -1,6 +1,9 @@
-﻿using domain;
+﻿using commerce;
+using domain;
 using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace TPWinForm
 {
@@ -18,18 +21,25 @@ namespace TPWinForm
         }
         private void Label1_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void AddArticle_Load(object sender, EventArgs e)
         {
             ListaDesplegables desplegables = new ListaDesplegables();
+            CategoryConector categotyConector = new CategoryConector();
 
             try
             {
+
+
+                cboCategory.DataSource = categotyConector.GetCategories();
+                cboCategory.ValueMember = "Id";
+                cboCategory.DisplayMember = "Description";
+
                 cboBrand.DataSource = desplegables.Listar();
                 cboBrand.ValueMember = "Id";
-                cboBrand.DisplayMember = "brand";
+                cboBrand.DisplayMember = "Description";
 
                 if (article != null)
                 {
@@ -37,9 +47,10 @@ namespace TPWinForm
                     txtArticleName.Text = article.Name;
                     txtArticleDescription.Text = article.Description;
                     txtUrlImage.Text = article.Image;
+                    txtArticlePrice.Text = article.Price.ToString();
                     //cargarimagen(article.Image);
                     cboBrand.SelectedValue = article.ArticleBrand.Id;
-               
+                    cboCategory.SelectedValue = article.ArticleCategory.Id;
                 }
             }
             catch (Exception ex)
@@ -90,7 +101,7 @@ namespace TPWinForm
                 }
                 else
                 {
-                    int newArtID = (int) ArticleListConector.CreateNewArticle(article);
+                    int newArtID = (int)ArticleListConector.CreateNewArticle(article);
                     MessageBox.Show("se agrego el id " + newArtID);
                 }
                 Close();
@@ -105,7 +116,7 @@ namespace TPWinForm
 
         private void pbxImages_Click(object sender, EventArgs e)
         {
-          
+
         }
 
 
@@ -114,7 +125,7 @@ namespace TPWinForm
             ArticleConector brand = new ArticleConector();
             try
             {
-                //cboBrand.DataSource = Brand.Listar();
+                //cboBrand.DataSource = Brand.FetchCategories();
             }
             catch (Exception ex)
             {

@@ -1,9 +1,7 @@
 ﻿using commerce;
 using domain;
 using System;
-using System.Collections.Generic;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace TPWinForm
 {
@@ -59,16 +57,6 @@ namespace TPWinForm
 
         }
 
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labelImage_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnCancellAddArticle(object sender, EventArgs e)
         {
             this.Close();
@@ -111,12 +99,6 @@ namespace TPWinForm
             }
 
         }
-
-        private void pbxImages_Click(object sender, EventArgs e)
-        {
-
-        }
-
 
         private void cboBrand_SelectedIndexChanged(object sender, EventArgs e)
         {

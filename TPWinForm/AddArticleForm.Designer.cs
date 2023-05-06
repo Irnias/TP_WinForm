@@ -85,13 +85,11 @@
             // 
             resources.ApplyResources(this.labelBrand, "labelBrand");
             this.labelBrand.Name = "labelBrand";
-            this.labelBrand.Click += new System.EventHandler(this.label4_Click);
             // 
             // labelImage
             // 
             resources.ApplyResources(this.labelImage, "labelImage");
             this.labelImage.Name = "labelImage";
-            this.labelImage.Click += new System.EventHandler(this.labelImage_Click);
             // 
             // cboBrand
             // 
@@ -129,7 +127,6 @@
             resources.ApplyResources(this.pbxImages, "pbxImages");
             this.pbxImages.Name = "pbxImages";
             this.pbxImages.TabStop = false;
-            this.pbxImages.Click += new System.EventHandler(this.pbxImages_Click);
             // 
             // btnSave
             // 

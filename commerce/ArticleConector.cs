@@ -51,6 +51,29 @@ namespace domain
                 data.close();
             }
         }
+
+        public void Modifity(Article article)
+        {
+            DataAccess dataAcces = new DataAccess();
+
+
+            try
+            {
+                dataAcces.setQuery("update Articulos set Codigo = @codigo, Nombre = @name, Descripcion = @description, IdMarca = @idMarca , IdCategoria = @idCategoria, Precio = @precio where Id= @id");
+                dataAcces.setearParametro("@codigo", article.ArticleCode);
+                dataAcces.setearParametro("@name", article.Name);
+                dataAcces.setearParametro("@description", article.Description);
+                dataAcces.setearParametro("@idMarca", article.ArticleBrand.Id);
+                dataAcces.setearParametro("@id", article.ArticleId);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+        }
+
         public int CreateNewArticle(Article newArt)
         {
             DataAccess acces = new DataAccess();

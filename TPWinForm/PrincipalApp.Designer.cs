@@ -33,6 +33,7 @@
             this.dgvPrincipal = new System.Windows.Forms.DataGridView();
             this.pbxArticle = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.btnModArticle = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrincipal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxArticle)).BeginInit();
             this.SuspendLayout();
@@ -81,11 +82,26 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // btnModArticle
+            // 
+            this.btnModArticle.BackColor = System.Drawing.Color.SkyBlue;
+            this.btnModArticle.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnModArticle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModArticle.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnModArticle.Location = new System.Drawing.Point(144, 436);
+            this.btnModArticle.Name = "btnModArticle";
+            this.btnModArticle.Size = new System.Drawing.Size(75, 23);
+            this.btnModArticle.TabIndex = 4;
+            this.btnModArticle.Text = "Mod Article";
+            this.btnModArticle.UseVisualStyleBackColor = false;
+            this.btnModArticle.Click += new System.EventHandler(this.btnModArticle_Click);
+            // 
             // PrincipalApp
             // 
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(494, 471);
+            this.Controls.Add(this.btnModArticle);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pbxArticle);
             this.Controls.Add(this.dgvPrincipal);
@@ -110,6 +126,7 @@
         private System.Windows.Forms.DataGridView dgvPrincipal;
         private System.Windows.Forms.PictureBox pbxArticle;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnModArticle;
     }
 }
 

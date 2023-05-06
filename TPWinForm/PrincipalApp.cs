@@ -67,5 +67,13 @@ namespace TPWinForm
         {
 
         }
+
+        private void btnModArticle_Click(object sender, EventArgs e)
+        {
+            Article select;
+            select = (Article)dgvPrincipal.CurrentRow.DataBoundItem;
+            AddArticleFom mod = new AddArticleFom(select);
+            mod.ShowDialog();
+        }
     }
 }

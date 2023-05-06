@@ -6,11 +6,16 @@ namespace TPWinForm
 {
     public partial class AddArticleFom : Form
     {
+        private Article article = null;
         public AddArticleFom()
         {
             InitializeComponent();
         }
-
+        public AddArticleFom(Article article)
+        {
+            InitializeComponent();
+            this.article = article;
+        }
         private void Label1_Click(object sender, EventArgs e)
         {
             
@@ -23,7 +28,19 @@ namespace TPWinForm
             try
             {
                 cboBrand.DataSource = desplegables.Listar();
-           
+                cboBrand.ValueMember = "Id";
+                cboBrand.DisplayMember = "brand";
+
+                if (article != null)
+                {
+                    txtArticleCode.Text = article.ArticleCode;
+                    txtArticleName.Text = article.Name;
+                    txtArticleDescription.Text = article.Description;
+                    txtUrlImage.Text = article.Image;
+                    //cargarimagen(article.Image);
+                    cboBrand.SelectedValue = article.ArticleBrand.Id;
+               
+                }
             }
             catch (Exception ex)
             {
@@ -50,21 +67,32 @@ namespace TPWinForm
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            Article newArt = new Article();
+            //Article newArt = new Article();
             ArticleConector ArticleListConector = new ArticleConector();
 
             try
             {
-                newArt.Name = txtArticleName.Text;
-                newArt.Description = txtArticleDescription.Text;
-                newArt.Image = txtUrlImage.Text;
-                newArt.ArticleBrand = (Brand)cboBrand.SelectedItem;
-                newArt.ArticleCategory = (Category)cboCategory.SelectedItem;
-                newArt.Price = decimal.Parse(txtArticlePrice.Text);
-                newArt.ArticleCode = txtArticleCode.Text;
+                if (article == null)
+                    article = new Article();
 
-                int newArtID = (int) ArticleListConector.CreateNewArticle(newArt);
-                MessageBox.Show("se agrego el id " + newArtID);
+                article.Name = txtArticleName.Text;
+                article.Description = txtArticleDescription.Text;
+                article.Image = txtUrlImage.Text;
+                article.ArticleBrand = (Brand)cboBrand.SelectedItem;
+                article.ArticleCategory = (Category)cboCategory.SelectedItem;
+                article.Price = decimal.Parse(txtArticlePrice.Text);
+                article.ArticleCode = txtArticleCode.Text;
+
+                if (article.ArticleId != 0)
+                {
+                    ArticleListConector.Modifity(article);
+                    MessageBox.Show("Se modifico el articulo");
+                }
+                else
+                {
+                    int newArtID = (int) ArticleListConector.CreateNewArticle(article);
+                    MessageBox.Show("se agrego el id " + newArtID);
+                }
                 Close();
             }
             catch (Exception ex)

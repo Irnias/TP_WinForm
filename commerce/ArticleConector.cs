@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace domain
 {
-    public class Lista
+    public class ArticleConector
     {
         public List<Article> Listar()
         {
@@ -40,14 +40,20 @@ namespace domain
                 data.close();
             }
         }
-        public void Add(Article Nuevo)
+        public int CreateNewArticle(Article newArt)
         {
             DataAccess acces = new DataAccess();
 
             try
             {
-                acces.setQuery("INSERT INTO ARTICULOS (Nombre, Descripcion) values('" + Nuevo.Name + "', '" + Nuevo.Description + "')");
+                string query = "INSERT INTO ARTICULOS (Codigo, Nombre, Descripcion, IdMarca, Precio) OUTPUT Inserted.ID values('" + newArt.ArticleCode + "', '" + newArt.Name + "', '" + newArt.Description +"', " + newArt.ArticleBrand.Id + ", " +newArt.Price + ")";
+                acces.setQuery(query);
+                int newArticleId = (int) acces.executeScalar();
+                acces.ClearQuery();
+
+                acces.setQuery("INSERT INTO IMAGENES (IdArticulo, ImagenUrl) values(" + newArticleId + ", '"+ newArt.Image + "')");
                 acces.executeAction();
+                return newArticleId;
             }
             catch (Exception ex)
             {

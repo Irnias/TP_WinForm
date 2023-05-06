@@ -43,7 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataAccess.cs" />
-    <Compile Include="Lista.cs" />
+    <Compile Include="ArticleConector.cs" />
     <Compile Include="ListaDesplegables.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

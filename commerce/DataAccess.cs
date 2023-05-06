@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Data.SqlClient;
 namespace domain
 {
@@ -24,6 +20,11 @@ namespace domain
             command.CommandType = System.Data.CommandType.Text;
             command.CommandText = query;
         }
+
+        public void ClearQuery()
+        {
+            command.CommandText = "";
+        }
         public void execute()
         {
             command.Connection = connection;
@@ -39,7 +40,6 @@ namespace domain
             }
  
         }
-
   
         public SqlDataReader sqlReader
         {
@@ -53,6 +53,25 @@ namespace domain
             {
                 connection.Open();
                 command.ExecuteNonQuery();
+                connection.Close();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+        
+        public int executeScalar()
+        {
+            command.Connection = connection;
+
+            try
+            {
+                connection.Open();
+                int entityId = (int)command.ExecuteScalar();
+                connection.Close();
+                return entityId;
             }
             catch (Exception ex)
             {

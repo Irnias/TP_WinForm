@@ -51,7 +51,7 @@ namespace TPWinForm
         private void btnSave_Click(object sender, EventArgs e)
         {
             Article newArt = new Article();
-            Lista newList = new Lista();
+            ArticleConector ArticleListConector = new ArticleConector();
 
             try
             {
@@ -59,9 +59,12 @@ namespace TPWinForm
                 newArt.Description = txtArticleDescription.Text;
                 newArt.Image = txtUrlImage.Text;
                 newArt.ArticleBrand = (Brand)cboBrand.SelectedItem;
+                newArt.ArticleCategory = (Category)cboCategory.SelectedItem;
+                newArt.Price = float.Parse(txtArticlePrice.Text);
+                newArt.ArticleCode = txtArticleCode.Text;
 
-                newList.Add(newArt);
-                MessageBox.Show("se agrego");
+                int newArtID = (int) ArticleListConector.CreateNewArticle(newArt);
+                MessageBox.Show("se agrego el id " + newArtID);
                 Close();
             }
             catch (Exception ex)
@@ -80,7 +83,7 @@ namespace TPWinForm
 
         private void cboBrand_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Lista brand = new Lista();
+            ArticleConector brand = new ArticleConector();
             try
             {
                 //cboBrand.DataSource = Brand.Listar();
@@ -94,7 +97,7 @@ namespace TPWinForm
 
         private void cboCategory_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //Lista categor;
+            //ArticleConector categor;
         }
 
         private void txtUrlImage_Leave(object sender, EventArgs e)

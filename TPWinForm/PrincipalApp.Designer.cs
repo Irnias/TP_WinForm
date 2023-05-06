@@ -46,7 +46,7 @@
             this.btnAddArticle.Name = "btnAddArticle";
             this.btnAddArticle.Size = new System.Drawing.Size(75, 23);
             this.btnAddArticle.TabIndex = 0;
-            this.btnAddArticle.Text = "Add Article";
+            this.btnAddArticle.Text = "CreateNewArticle Article";
             this.btnAddArticle.UseVisualStyleBackColor = false;
             this.btnAddArticle.Click += new System.EventHandler(this.btnAddArticle_Click);
             // 

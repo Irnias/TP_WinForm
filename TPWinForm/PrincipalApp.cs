@@ -23,7 +23,7 @@ namespace TPWinForm
 
         private void LoadPrincipalApp(object sender, EventArgs e)
         {
-            Lista listas = new Lista();
+            ArticleConector listas = new ArticleConector();
             listArticle = listas.Listar();
             dgvPrincipal.DataSource = listArticle;
             //dgvPrincipal.Columns["Image"].Visible=false;

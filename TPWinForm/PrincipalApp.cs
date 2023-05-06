@@ -35,7 +35,7 @@ namespace TPWinForm
             {
                 listArticle = listas.Listar();
                 dgvPrincipal.DataSource = listArticle;
-                dgvPrincipal.Columns["Image"].Visible=false;
+                hideColumns();
                 cargarImagen(listArticle[0].Image);
             }
             catch (Exception ex)
@@ -46,10 +46,19 @@ namespace TPWinForm
 
         }
 
+        private void hideColumns()
+        {
+            dgvPrincipal.Columns["ArticleId"].Visible = false;
+            dgvPrincipal.Columns["Image"].Visible = false;
+        }
+
         private void dgvPrincipal_SelectionChanged(object sender, EventArgs e)
         {
-            Article seleccionado = (Article)dgvPrincipal.CurrentRow.DataBoundItem;
-            cargarImagen(seleccionado.Image);
+            if (dgvPrincipal.CurrentRow != null)
+            {
+                Article seleccionado = (Article)dgvPrincipal.CurrentRow.DataBoundItem;
+                cargarImagen(seleccionado.Image);
+            }
         }
 
         private void cargarImagen(string image)
@@ -114,7 +123,28 @@ namespace TPWinForm
             //eliminar(true);
         }
 
+        private void btnFilter_Click(object sender, EventArgs e)
+        {
        
-       
+        }
+
+        private void txtFilter_TextChanged(object sender, EventArgs e)
+        {
+            List<Article> FilterList;
+            string filter = txtFilter.Text;
+
+            if (filter.Length >=3 )
+            {
+                FilterList = listArticle.FindAll(x => x.Name.ToUpper().Contains(filter.ToUpper()) || x.Description.ToUpper().Contains(filter.ToUpper()));
+            }
+            else
+            {
+                FilterList = listArticle;
+            }
+
+            dgvPrincipal.DataSource = null;
+            dgvPrincipal.DataSource = FilterList;
+            hideColumns();
+        }
     }
 }

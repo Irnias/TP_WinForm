@@ -36,6 +36,9 @@
             this.btnModArticle = new System.Windows.Forms.Button();
             this.Delete = new System.Windows.Forms.Button();
             this.Remove = new System.Windows.Forms.Button();
+            this.lblFilter = new System.Windows.Forms.Label();
+            this.txtFilter = new System.Windows.Forms.TextBox();
+            this.btnFilter = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrincipal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxArticle)).BeginInit();
             this.SuspendLayout();
@@ -57,7 +60,7 @@
             // dgvPrincipal
             // 
             this.dgvPrincipal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPrincipal.Location = new System.Drawing.Point(26, 24);
+            this.dgvPrincipal.Location = new System.Drawing.Point(26, 67);
             this.dgvPrincipal.Name = "dgvPrincipal";
             this.dgvPrincipal.Size = new System.Drawing.Size(427, 172);
             this.dgvPrincipal.TabIndex = 1;
@@ -66,7 +69,7 @@
             // pbxArticle
             // 
             this.pbxArticle.BackColor = System.Drawing.Color.White;
-            this.pbxArticle.Location = new System.Drawing.Point(127, 227);
+            this.pbxArticle.Location = new System.Drawing.Point(127, 245);
             this.pbxArticle.Name = "pbxArticle";
             this.pbxArticle.Size = new System.Drawing.Size(215, 175);
             this.pbxArticle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -126,11 +129,45 @@
             this.Remove.UseVisualStyleBackColor = false;
             this.Remove.Click += new System.EventHandler(this.Remove_Click);
             // 
+            // lblFilter
+            // 
+            this.lblFilter.AutoSize = true;
+            this.lblFilter.Location = new System.Drawing.Point(26, 31);
+            this.lblFilter.Name = "lblFilter";
+            this.lblFilter.Size = new System.Drawing.Size(29, 13);
+            this.lblFilter.TabIndex = 7;
+            this.lblFilter.Text = "Filter";
+            // 
+            // txtFilter
+            // 
+            this.txtFilter.Location = new System.Drawing.Point(61, 24);
+            this.txtFilter.Name = "txtFilter";
+            this.txtFilter.Size = new System.Drawing.Size(100, 20);
+            this.txtFilter.TabIndex = 8;
+            this.txtFilter.TextChanged += new System.EventHandler(this.txtFilter_TextChanged);
+            // 
+            // btnFilter
+            // 
+            this.btnFilter.BackColor = System.Drawing.Color.SkyBlue;
+            this.btnFilter.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFilter.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnFilter.Location = new System.Drawing.Point(185, 21);
+            this.btnFilter.Name = "btnFilter";
+            this.btnFilter.Size = new System.Drawing.Size(75, 23);
+            this.btnFilter.TabIndex = 9;
+            this.btnFilter.Text = "Search";
+            this.btnFilter.UseVisualStyleBackColor = false;
+            this.btnFilter.Click += new System.EventHandler(this.btnFilter_Click);
+            // 
             // PrincipalApp
             // 
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(494, 471);
+            this.Controls.Add(this.btnFilter);
+            this.Controls.Add(this.txtFilter);
+            this.Controls.Add(this.lblFilter);
             this.Controls.Add(this.Remove);
             this.Controls.Add(this.Delete);
             this.Controls.Add(this.btnModArticle);
@@ -149,6 +186,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrincipal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxArticle)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -161,6 +199,9 @@
         private System.Windows.Forms.Button btnModArticle;
         private System.Windows.Forms.Button Delete;
         private System.Windows.Forms.Button Remove;
+        private System.Windows.Forms.Label lblFilter;
+        private System.Windows.Forms.TextBox txtFilter;
+        private System.Windows.Forms.Button btnFilter;
     }
 }
 

@@ -32,6 +32,7 @@
             this.btnAddArticle = new System.Windows.Forms.Button();
             this.dgvPrincipal = new System.Windows.Forms.DataGridView();
             this.pbxArticle = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrincipal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxArticle)).BeginInit();
             this.SuspendLayout();
@@ -70,11 +71,22 @@
             this.pbxArticle.TabStop = false;
             this.pbxArticle.Click += new System.EventHandler(this.pbxArticle_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(336, 312);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // PrincipalApp
             // 
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(494, 471);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.pbxArticle);
             this.Controls.Add(this.dgvPrincipal);
             this.Controls.Add(this.btnAddArticle);
@@ -97,6 +109,7 @@
         private System.Windows.Forms.Button btnAddArticle;
         private System.Windows.Forms.DataGridView dgvPrincipal;
         private System.Windows.Forms.PictureBox pbxArticle;
+        private System.Windows.Forms.Button button1;
     }
 }
 

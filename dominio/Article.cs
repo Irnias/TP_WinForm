@@ -15,6 +15,6 @@ namespace domain
         [DisplayName("Category")]
         public Category ArticleCategory { get; set; }
         public string Image { get; set; }
-        public float Price { get; set; }
+        public decimal Price { get; set; }
     }
 }

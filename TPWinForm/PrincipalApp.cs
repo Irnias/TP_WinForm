@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Forms;
 using domain;
 
@@ -40,7 +41,8 @@ namespace TPWinForm
         {
             try
             {
-                pbxArticle.Load(image);
+                List<string> lista = image.Split(',').Select(s => s.Trim()).ToList();
+                pbxArticle.Load(lista[0]);
             }
             catch (Exception)
             {
@@ -61,6 +63,9 @@ namespace TPWinForm
 
         }
 
- 
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

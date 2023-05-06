@@ -60,7 +60,7 @@ namespace TPWinForm
                 newArt.Image = txtUrlImage.Text;
                 newArt.ArticleBrand = (Brand)cboBrand.SelectedItem;
                 newArt.ArticleCategory = (Category)cboCategory.SelectedItem;
-                newArt.Price = float.Parse(txtArticlePrice.Text);
+                newArt.Price = decimal.Parse(txtArticlePrice.Text);
                 newArt.ArticleCode = txtArticleCode.Text;
 
                 int newArtID = (int) ArticleListConector.CreateNewArticle(newArt);

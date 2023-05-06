@@ -31,8 +31,6 @@ namespace TPWinForm
 
             try
             {
-
-
                 cboCategory.DataSource = categotyConector.GetCategories();
                 cboCategory.ValueMember = "Id";
                 cboCategory.DisplayMember = "Description";

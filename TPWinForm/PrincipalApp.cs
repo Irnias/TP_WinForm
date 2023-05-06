@@ -91,5 +91,23 @@ namespace TPWinForm
             mod.ShowDialog();
             cargar();
         }
+
+        private void Delete_Click(object sender, EventArgs e)
+        {
+            eliminar();
+        }
+
+        private void Remove_Click(object sender, EventArgs e)
+        {
+            eliminar(true);
+        }
+
+        private void eliminar(bool logico = false)
+        {
+           
+
+        }
+
+       
     }
 }

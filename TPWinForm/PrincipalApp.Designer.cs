@@ -34,6 +34,8 @@
             this.pbxArticle = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.btnModArticle = new System.Windows.Forms.Button();
+            this.Delete = new System.Windows.Forms.Button();
+            this.Remove = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrincipal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxArticle)).BeginInit();
             this.SuspendLayout();
@@ -96,11 +98,41 @@
             this.btnModArticle.UseVisualStyleBackColor = false;
             this.btnModArticle.Click += new System.EventHandler(this.btnModArticle_Click);
             // 
+            // Delete
+            // 
+            this.Delete.BackColor = System.Drawing.Color.SkyBlue;
+            this.Delete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Delete.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Delete.Location = new System.Drawing.Point(267, 436);
+            this.Delete.Name = "Delete";
+            this.Delete.Size = new System.Drawing.Size(75, 23);
+            this.Delete.TabIndex = 5;
+            this.Delete.Text = "Delete";
+            this.Delete.UseVisualStyleBackColor = false;
+            this.Delete.Click += new System.EventHandler(this.Delete_Click);
+            // 
+            // Remove
+            // 
+            this.Remove.BackColor = System.Drawing.Color.SkyBlue;
+            this.Remove.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Remove.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Remove.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Remove.Location = new System.Drawing.Point(388, 436);
+            this.Remove.Name = "Remove";
+            this.Remove.Size = new System.Drawing.Size(75, 23);
+            this.Remove.TabIndex = 6;
+            this.Remove.Text = "Remove";
+            this.Remove.UseVisualStyleBackColor = false;
+            this.Remove.Click += new System.EventHandler(this.Remove_Click);
+            // 
             // PrincipalApp
             // 
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(494, 471);
+            this.Controls.Add(this.Remove);
+            this.Controls.Add(this.Delete);
             this.Controls.Add(this.btnModArticle);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pbxArticle);
@@ -127,6 +159,8 @@
         private System.Windows.Forms.PictureBox pbxArticle;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnModArticle;
+        private System.Windows.Forms.Button Delete;
+        private System.Windows.Forms.Button Remove;
     }
 }
 

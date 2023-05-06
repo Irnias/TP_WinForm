@@ -98,7 +98,7 @@ namespace TPWinForm
             catch (Exception ex)
             {
 
-                throw ex;
+                MessageBox.Show(ex.ToString());
             }
 
         }

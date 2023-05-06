@@ -24,13 +24,28 @@ namespace TPWinForm
 
         private void LoadPrincipalApp(object sender, EventArgs e)
         {
+            cargar();
+       
+        }
+
+        private void cargar()
+        {
             ArticleConector listas = new ArticleConector();
-            listArticle = listas.Listar();
-            dgvPrincipal.DataSource = listArticle;
-            //dgvPrincipal.Columns["Image"].Visible=false;
-            cargarImagen(listArticle[0].Image);
+            try
+            {
+                listArticle = listas.Listar();
+                dgvPrincipal.DataSource = listArticle;
+                dgvPrincipal.Columns["Image"].Visible=false;
+                cargarImagen(listArticle[0].Image);
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
 
         }
+
         private void dgvPrincipal_SelectionChanged(object sender, EventArgs e)
         {
             Article seleccionado = (Article)dgvPrincipal.CurrentRow.DataBoundItem;
@@ -74,6 +89,7 @@ namespace TPWinForm
             select = (Article)dgvPrincipal.CurrentRow.DataBoundItem;
             AddArticleFom mod = new AddArticleFom(select);
             mod.ShowDialog();
+            cargar();
         }
     }
 }

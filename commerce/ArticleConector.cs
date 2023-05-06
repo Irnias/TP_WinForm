@@ -59,17 +59,23 @@ namespace domain
 
             try
             {
-                dataAcces.setQuery("update Articulos set Codigo = @codigo, Nombre = @name, Descripcion = @description, IdMarca = @idMarca , IdCategoria = @idCategoria, Precio = @precio where Id= @id");
-                dataAcces.setearParametro("@codigo", article.ArticleCode);
+                dataAcces.setQuery("update Articulos set Codigo = @cod , Nombre = @name, Descripcion = @description, IdMarca = @idMarca  where Id= @id");
+                dataAcces.setearParametro("@cod", article.ArticleCode);
                 dataAcces.setearParametro("@name", article.Name);
                 dataAcces.setearParametro("@description", article.Description);
                 dataAcces.setearParametro("@idMarca", article.ArticleBrand.Id);
                 dataAcces.setearParametro("@id", article.ArticleId);
+
+                dataAcces.executeAction();
             }
             catch (Exception)
             {
 
                 throw;
+            }
+            finally
+            {
+                dataAcces.close();
             }
 
         }

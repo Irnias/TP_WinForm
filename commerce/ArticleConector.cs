@@ -107,6 +107,23 @@ namespace domain
                 acces.close();
             }
         }
+
+        public void eliminar(int id)
+        {
+            try
+            {
+                DataAccess data = new DataAccess();
+                data.setQuery("delete from Articulos where id = @id");
+                data.setearParametro("@id", id);
+                data.executeAction();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
     }
 
     

@@ -94,7 +94,19 @@ namespace TPWinForm
 
         private void Delete_Click(object sender, EventArgs e)
         {
-            eliminar();
+            ArticleConector articulo = new ArticleConector();
+            Article selected;
+            try
+            {
+                selected = (Article)dgvPrincipal.CurrentRow.DataBoundItem;
+                articulo.eliminar(selected.ArticleId);
+                cargar();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
         }
 
         private void Remove_Click(object sender, EventArgs e)
@@ -102,12 +114,7 @@ namespace TPWinForm
             eliminar(true);
         }
 
-        private void eliminar(bool logico = false)
-        {
-           
-
-        }
-
+       
        
     }
 }

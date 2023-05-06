@@ -111,7 +111,7 @@ namespace TPWinForm
 
         private void Remove_Click(object sender, EventArgs e)
         {
-            eliminar(true);
+            //eliminar(true);
         }
 
        

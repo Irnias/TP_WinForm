@@ -20,6 +20,7 @@ namespace TPWinForm
         {
             AddArticleFom newForm = new AddArticleFom();
             newForm.ShowDialog();
+            cargar();
         }
 
         private void LoadPrincipalApp(object sender, EventArgs e)

@@ -60,8 +60,11 @@
             // dgvPrincipal
             // 
             this.dgvPrincipal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPrincipal.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvPrincipal.Location = new System.Drawing.Point(26, 67);
+            this.dgvPrincipal.MultiSelect = false;
             this.dgvPrincipal.Name = "dgvPrincipal";
+            this.dgvPrincipal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPrincipal.Size = new System.Drawing.Size(427, 172);
             this.dgvPrincipal.TabIndex = 1;
             this.dgvPrincipal.SelectionChanged += new System.EventHandler(this.dgvPrincipal_SelectionChanged);

@@ -1,13 +1,17 @@
 ﻿using commerce;
 using domain;
 using System;
+using System.IO;
 using System.Windows.Forms;
+using System.Configuration;
 
 namespace TPWinForm
 {
     public partial class AddArticleFom : Form
     {
         private Article article = null;
+        private OpenFileDialog file = null;
+
         public AddArticleFom()
         {
             InitializeComponent();
@@ -97,6 +101,8 @@ namespace TPWinForm
 
                 MessageBox.Show(ex.ToString());
             }
+            if (file != null && !(txtUrlImage.Text.ToUpper().Contains("HTTP")))
+                imagenLocal();
 
         }
 
@@ -135,6 +141,25 @@ namespace TPWinForm
 
                 pbxImages.Load("https://static.wikia.nocookie.net/videojuego/images/9/9c/Imagen_no_disponible-0.png/revision/latest/thumbnail/width/360/height/360?cb=20170910134200");
             }
+        }
+
+        private void btnAddImage_Click(object sender, EventArgs e)
+        {
+            file = new OpenFileDialog();
+            file.Filter = "jpg|*.jpg;|png|*.png";
+            if (file.ShowDialog() == DialogResult.OK)
+            {
+                txtUrlImage.Text = file.FileName;
+                cargarimagen(file.FileName);
+
+                //File.Copy(file.FileName, ConfigurationManager.AppSettings["ArticuloApp"]+ file.SafeFileName);
+            }
+        }
+
+        private void imagenLocal()
+        {
+            File.Copy(file.FileName, ConfigurationManager.AppSettings["ArticuloApp"]+ file.SafeFileName);
+
         }
     }
 }

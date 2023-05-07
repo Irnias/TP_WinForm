@@ -47,6 +47,7 @@
             this.btnCancelAddArticle = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtUrlImage = new System.Windows.Forms.TextBox();
+            this.btnAddImage = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbxImages)).BeginInit();
             this.SuspendLayout();
             // 
@@ -153,10 +154,18 @@
             this.txtUrlImage.Name = "txtUrlImage";
             this.txtUrlImage.Leave += new System.EventHandler(this.txtUrlImage_Leave);
             // 
+            // btnAddImage
+            // 
+            resources.ApplyResources(this.btnAddImage, "btnAddImage");
+            this.btnAddImage.Name = "btnAddImage";
+            this.btnAddImage.UseVisualStyleBackColor = true;
+            this.btnAddImage.Click += new System.EventHandler(this.btnAddImage_Click);
+            // 
             // AddArticleFom
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnAddImage);
             this.Controls.Add(this.txtUrlImage);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnCancelAddArticle);
@@ -205,5 +214,6 @@
         private System.Windows.Forms.Button btnCancelAddArticle;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtUrlImage;
+        private System.Windows.Forms.Button btnAddImage;
     }
 }

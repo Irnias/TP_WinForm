@@ -137,6 +137,7 @@ namespace TPWinForm
             {
                 FilterList = listArticle.FindAll(x => x.Name.ToUpper().Contains(filter.ToUpper()) || x.Description.ToUpper().Contains(filter.ToUpper()));
             }
+        
             else
             {
                 FilterList = listArticle;

@@ -123,6 +123,48 @@ namespace domain
                 throw;
             }
         }
+        public List<Article> filtrar(string brand, string category, string filtro)
+         {
+        List<Article> list = new List<Article>();
+            DataAccess data = new DataAccess();
+            try
+            {
+                string consulta = "SELECT a.ID as artId, a.nombre as name, a.descripcion as artDescrip, a.Codigo as artCode, a.precio as price, c.Descripcion as category, c.Id as categoryId, " +
+                    "m.Descripcion as brand, m.id as brandId, STRING_AGG(i.imagenUrl, ',') AS imagen FROM Articulos a LEFT JOIN Imagenes i ON a.ID = i.idArticulo " +
+                    "LEFT JOIN CATEGORIAS c ON a.IdCategoria = c.Id LEFT JOIN MARCAS m on m.Id = a.IdMarca " +
+                    "GROUP BY a.ID, a.nombre, a.Codigo, a.descripcion, a.precio, c.Descripcion, c.Id, m.Descripcion, m.Id order by a.id ";
+                 data.setQuery(consulta);
+                data.execute();
+                while (data.sqlReader.Read())
+                {
+                    Article aux = new Article();
+                    aux.ArticleId = (!(data.sqlReader["artId"] is DBNull)) ? (int)data.sqlReader["artId"] : 0;
+                    aux.Name = (!(data.sqlReader["name"] is DBNull)) ? (string)data.sqlReader["name"] : "";
+                    aux.Description = (!(data.sqlReader["artDescrip"] is DBNull)) ? (string)data.sqlReader["artDescrip"] : "";
+                    aux.ArticleCode = (!(data.sqlReader["artCode"] is DBNull)) ? (string)data.sqlReader["artCode"] : "";
+                    aux.Price = (!(data.sqlReader["price"] is DBNull)) ? (decimal)data.sqlReader["price"] : 0;
+                    aux.ArticleCategory = new Category(
+                        (!(data.sqlReader["categoryId"] is DBNull)) ? (int)data.sqlReader["categoryId"] : 0,
+                        (!(data.sqlReader["category"] is DBNull)) ? (string)data.sqlReader["category"] : ""
+                        );
+                    aux.ArticleBrand = new Brand(
+                        (!(data.sqlReader["brandId"] is DBNull)) ? (int)data.sqlReader["brandId"] : 0,
+                        (!(data.sqlReader["brand"] is DBNull)) ? (string)data.sqlReader["brand"] : ""
+                        );
+                    aux.Image = (!(data.sqlReader["imagen"] is DBNull)) ? (string)data.sqlReader["imagen"] : "";
+
+                    list.Add(aux);
+                }
+                return list;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        
+        
+        }
 
     }
 

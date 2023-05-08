@@ -170,7 +170,7 @@
             this.cboBrand.Name = "cboBrand";
             this.cboBrand.Size = new System.Drawing.Size(100, 21);
             this.cboBrand.TabIndex = 11;
-            this.cboBrand.SelectedIndexChanged += new System.EventHandler(this.cboBrand_SelectedIndexChanged);
+           
             // 
             // cboCategory
             // 

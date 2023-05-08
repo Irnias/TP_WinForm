@@ -86,7 +86,7 @@ namespace TPWinForm
 
                 if (article.ArticleId != 0)
                 {
-                    ArticleListConector.Modifity(article);
+                    ArticleListConector.Modify(article);
                     MessageBox.Show("Se modifico el articulo");
                 }
                 else

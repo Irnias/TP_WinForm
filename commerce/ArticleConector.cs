@@ -52,7 +52,7 @@ namespace domain
             }
         }
 
-        public void Modifity(Article article)
+        public void Modify(Article article)
         {
             DataAccess dataAcces = new DataAccess();
 
@@ -133,7 +133,38 @@ namespace domain
                     "m.Descripcion as brand, m.id as brandId, STRING_AGG(i.imagenUrl, ',') AS imagen FROM Articulos a LEFT JOIN Imagenes i ON a.ID = i.idArticulo " +
                     "LEFT JOIN CATEGORIAS c ON a.IdCategoria = c.Id LEFT JOIN MARCAS m on m.Id = a.IdMarca " +
                     "GROUP BY a.ID, a.nombre, a.Codigo, a.descripcion, a.precio, c.Descripcion, c.Id, m.Descripcion, m.Id order by a.id ";
-                 data.setQuery(consulta);
+                switch(brand)
+                {
+                    case "Samsung":
+                        consulta += "m.Descripcion" + filtro;
+                        break;
+                    case "Sony":
+                        consulta += "m.Descripcion" + filtro;
+                        break;
+                    case "Apple":
+                        consulta += "m.Descripcion" + filtro;
+                        break;
+                    case "Huawei":
+                        consulta += "m.Descripcion" + filtro;
+                        break;
+                    case "Motorola":
+                        consulta += "m.Descripcion" + filtro;
+                        break;
+                }
+                switch (category)
+                {
+                    case "Televisores":
+                        consulta += "c.Descripcion" + filtro;
+                        break;
+                    case "Media":
+                        consulta += "c.Descripcion" + filtro;
+                        break;
+                    case "Celulares":
+                        consulta += "c.Descripcion" + filtro;
+                        break;
+                }
+
+                data.setQuery(consulta);
                 data.execute();
                 while (data.sqlReader.Read())
                 {

@@ -161,15 +161,25 @@ namespace TPWinForm
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
+            List<Article> FilterList;
+            string filter = txtFilter.Text;
 
+            if (filter.Length >= 3)
+            {
+                FilterList = listArticle.FindAll(x => x.Name.ToUpper().Contains(filter.ToUpper()) || x.Description.ToUpper().Contains(filter.ToUpper()));
+            }
+
+            else
+            {
+                FilterList = listArticle;
+            }
+
+            dgvPrincipal.DataSource = null;
+            dgvPrincipal.DataSource = FilterList;
+            hideColumns();
         }
 
-        private void cboBrand_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string option =cboBrand.SelectedItem.ToString();
-            
-        }
-
+       
         private void btnAdvancedSearch_Click(object sender, EventArgs e)
         {
             ArticleConector art = new ArticleConector();
@@ -177,25 +187,8 @@ namespace TPWinForm
             {
                 string brand = cboBrand.SelectedItem.ToString();
                 string category = cboCategory.SelectedItem.ToString();
-                List<Article> FilterList;
                 string filter = txtAdvancedFilter.Text;
-                if (filter.Length >= 3)
-                {
-                    FilterList = listArticle.FindAll(x => x.Name.ToUpper().Contains(filter.ToUpper()) || x.Description.ToUpper().Contains(filter.ToUpper()));
-                }
-
-                else
-                {
-                    FilterList = listArticle;
-                }
-
-                dgvPrincipal.DataSource = null;
-                dgvPrincipal.DataSource = FilterList;
-                hideColumns();
-
-
-
-
+                dgvPrincipal.DataSource = art.filtrar(brand, category, filter);
             }
             catch (Exception ex)
             {

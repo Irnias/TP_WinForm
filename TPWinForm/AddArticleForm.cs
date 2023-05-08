@@ -1,9 +1,9 @@
 ﻿using commerce;
 using domain;
 using System;
+using System.Configuration;
 using System.IO;
 using System.Windows.Forms;
-using System.Configuration;
 
 namespace TPWinForm
 {
@@ -91,8 +91,10 @@ namespace TPWinForm
                 }
                 else
                 {
-                    int newArtID = (int)ArticleListConector.CreateNewArticle(article);
-                    MessageBox.Show("se agrego el id " + newArtID);
+              
+                   int newArtID = (int)ArticleListConector.CreateNewArticle(article);
+                   MessageBox.Show("se agrego el id " + newArtID);
+                   
                 }
                 Close();
             }
@@ -161,5 +163,48 @@ namespace TPWinForm
             File.Copy(file.FileName, ConfigurationManager.AppSettings["ArticuloApp"]+ file.SafeFileName);
 
         }
+
+
+        private bool Validaciones()
+        {
+            if (txtArticleName.SelectedText == " ")
+            {
+                MessageBox.Show("Porfavor, agregue un nombre para su articulo");
+                return true;
+            }
+
+            if (txtArticleCode.SelectedText == " ") {
+                MessageBox.Show("Porfavor, agruegue un codigo ppara su articulo");
+                return true;
+            }
+            return false;
+        }
+        private bool validacionesPrecio(string cadena)
+        {
+          
+            foreach (char caracter in cadena)
+            {
+                if (!(char.IsNumber(caracter)))
+                    return false;
+            }
+            return true;
+        }
+
+        private bool validarPrecio()
+        {
+            if (string.IsNullOrEmpty(txtArticlePrice.Text))
+            {
+                MessageBox.Show("Debes cargar el precio del producto");
+                return true;
+            }
+            if (!(validacionesPrecio(txtArticlePrice.Text)))
+            {
+                MessageBox.Show("Porfavor, ingrese un precio en NUMEROS");
+                return true;
+            }
+            return false;
+        }
+      
+
     }
 }

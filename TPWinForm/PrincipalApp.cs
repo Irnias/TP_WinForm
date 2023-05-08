@@ -9,7 +9,7 @@ namespace TPWinForm
     public partial class PrincipalApp : Form
     {
         private List<Article> listArticle;
-    
+
 
         public PrincipalApp()
         {
@@ -21,7 +21,7 @@ namespace TPWinForm
             AddArticleFom newForm = new AddArticleFom();
             newForm.ShowDialog();
             cargar();
-           
+
         }
 
         private void LoadPrincipalApp(object sender, EventArgs e)
@@ -35,8 +35,8 @@ namespace TPWinForm
             cboCategory.Items.Add("Televisores");
             cboCategory.Items.Add("Media");
             cboCategory.Items.Add("Celulares");
-        
-    }
+
+        }
 
         private void cargar()
         {
@@ -83,7 +83,7 @@ namespace TPWinForm
 
                 pbxArticle.Load("https://static.wikia.nocookie.net/videojuego/images/9/9c/Imagen_no_disponible-0.png/revision/latest/thumbnail/width/360/height/360?cb=20170910134200");
             }
-           
+
 
         }
 
@@ -104,12 +104,30 @@ namespace TPWinForm
 
         private void btnModArticle_Click(object sender, EventArgs e)
         {
-            Article select;
-            select = (Article)dgvPrincipal.CurrentRow.DataBoundItem;
-            AddArticleFom mod = new AddArticleFom(select);
-            mod.ShowDialog();
-            cargar();
+            try
+            {
+                Article select;
+                if (dgvPrincipal.CurrentRow == null)
+                {
+                    MessageBox.Show("Eliga un articulo para continuar");
+                }
+                else { 
+                    select = (Article)dgvPrincipal.CurrentRow.DataBoundItem;
+                    AddArticleFom mod = new AddArticleFom(select);
+                    mod.ShowDialog();
+                    cargar();
+                }
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("Eliga un articulo para continuar");
+               
+            }
         }
+
+        
+        
 
         private void Delete_Click(object sender, EventArgs e)
         {

@@ -32,7 +32,7 @@
             this.btnAddArticle = new System.Windows.Forms.Button();
             this.dgvPrincipal = new System.Windows.Forms.DataGridView();
             this.pbxArticle = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnNextImage = new System.Windows.Forms.Button();
             this.btnModArticle = new System.Windows.Forms.Button();
             this.Delete = new System.Windows.Forms.Button();
             this.lblFilter = new System.Windows.Forms.Label();
@@ -42,6 +42,7 @@
             this.btnAdvancedSearch = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnPrevImage = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrincipal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxArticle)).BeginInit();
             this.SuspendLayout();
@@ -83,15 +84,15 @@
             this.pbxArticle.TabStop = false;
             this.pbxArticle.Click += new System.EventHandler(this.pbxArticle_Click);
             // 
-            // button1
+            // btnNextImage
             // 
-            this.button1.Location = new System.Drawing.Point(374, 362);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnNextImage.Location = new System.Drawing.Point(374, 362);
+            this.btnNextImage.Name = "btnNextImage";
+            this.btnNextImage.Size = new System.Drawing.Size(25, 22);
+            this.btnNextImage.TabIndex = 3;
+            this.btnNextImage.Text = ">";
+            this.btnNextImage.UseVisualStyleBackColor = true;
+            this.btnNextImage.Click += new System.EventHandler(this.btnNextImage_Click);
             // 
             // btnModArticle
             // 
@@ -191,11 +192,22 @@
             this.label2.Text = "Category";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
+            // btnPrevImage
+            // 
+            this.btnPrevImage.Location = new System.Drawing.Point(156, 362);
+            this.btnPrevImage.Name = "btnPrevImage";
+            this.btnPrevImage.Size = new System.Drawing.Size(25, 22);
+            this.btnPrevImage.TabIndex = 17;
+            this.btnPrevImage.Text = "<";
+            this.btnPrevImage.UseVisualStyleBackColor = true;
+            this.btnPrevImage.Click += new System.EventHandler(this.btnPrevImage_Click);
+            // 
             // PrincipalApp
             // 
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(554, 471);
+            this.Controls.Add(this.btnPrevImage);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnAdvancedSearch);
@@ -205,7 +217,7 @@
             this.Controls.Add(this.lblFilter);
             this.Controls.Add(this.Delete);
             this.Controls.Add(this.btnModArticle);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnNextImage);
             this.Controls.Add(this.pbxArticle);
             this.Controls.Add(this.dgvPrincipal);
             this.Controls.Add(this.btnAddArticle);
@@ -229,7 +241,7 @@
         private System.Windows.Forms.Button btnAddArticle;
         private System.Windows.Forms.DataGridView dgvPrincipal;
         private System.Windows.Forms.PictureBox pbxArticle;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnNextImage;
         private System.Windows.Forms.Button btnModArticle;
         private System.Windows.Forms.Button Delete;
         private System.Windows.Forms.Label lblFilter;
@@ -239,6 +251,7 @@
         private System.Windows.Forms.Button btnAdvancedSearch;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnPrevImage;
     }
 }
 

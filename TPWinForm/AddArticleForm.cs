@@ -194,7 +194,7 @@ namespace TPWinForm
         {
             if (string.IsNullOrEmpty(txtArticlePrice.Text))
             {
-                MessageBox.Show("Debes cargar el precio del producto");
+                MessageBox.Show("Debes load el precio del producto");
                 return true;
             }
             if (!(validacionesPrecio(txtArticlePrice.Text)))

@@ -45,6 +45,7 @@
     <Compile Include="CategoryConector.cs" />
     <Compile Include="DataAccess.cs" />
     <Compile Include="ArticleConector.cs" />
+    <Compile Include="ImageConector.cs" />
     <Compile Include="ListaDesplegables.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

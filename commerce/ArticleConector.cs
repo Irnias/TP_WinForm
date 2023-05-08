@@ -57,7 +57,6 @@ namespace domain
         {
             DataAccess dataAcces = new DataAccess();
 
-
             try
             {
                 dataAcces.setQuery("update Articulos set Codigo = @cod , Nombre = @name, Descripcion = @description, IdMarca = @idMarca, Precio = @price  where Id= @id");

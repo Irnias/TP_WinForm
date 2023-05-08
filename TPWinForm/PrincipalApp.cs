@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 using domain;
+using commerce;
 
 namespace TPWinForm
 {
     public partial class PrincipalApp : Form
     {
         private List<Article> listArticle;
-
+        ImageConector imageConector = new ImageConector();
 
         public PrincipalApp()
         {
@@ -20,13 +21,12 @@ namespace TPWinForm
         {
             AddArticleFom newForm = new AddArticleFom();
             newForm.ShowDialog();
-            cargar();
-
+            load();
         }
 
         private void LoadPrincipalApp(object sender, EventArgs e)
         {
-            cargar();
+            load();
             cboBrand.Items.Add("Sony");
             cboBrand.Items.Add("Apple");
             cboBrand.Items.Add("Samsung");
@@ -35,10 +35,9 @@ namespace TPWinForm
             cboCategory.Items.Add("Televisores");
             cboCategory.Items.Add("Media");
             cboCategory.Items.Add("Celulares");
-
         }
 
-        private void cargar()
+        private void load()
         {
             ArticleConector listas = new ArticleConector();
             try
@@ -46,14 +45,12 @@ namespace TPWinForm
                 listArticle = listas.Listar();
                 dgvPrincipal.DataSource = listArticle;
                 hideColumns();
-                cargarImagen(listArticle[0].Image);
             }
             catch (Exception ex)
             {
 
                 MessageBox.Show(ex.ToString());
             }
-
         }
 
         private void hideColumns()
@@ -67,28 +64,21 @@ namespace TPWinForm
             if (dgvPrincipal.CurrentRow != null)
             {
                 Article seleccionado = (Article)dgvPrincipal.CurrentRow.DataBoundItem;
-                cargarImagen(seleccionado.Image);
+                imageConector.FindImageById(seleccionado.ArticleId);
+                showImage(imageConector.GetCurremtImg());
             }
         }
 
-        private void cargarImagen(string image)
+        private void showImage(string image)
         {
             try
             {
-                List<string> lista = image.Split(',').Select(s => s.Trim()).ToList();
-                pbxArticle.Load(lista[0]);
+                pbxArticle.Load(image);
             }
             catch (Exception)
             {
-
                 pbxArticle.Load("https://static.wikia.nocookie.net/videojuego/images/9/9c/Imagen_no_disponible-0.png/revision/latest/thumbnail/width/360/height/360?cb=20170910134200");
             }
-
-
-        }
-
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
 
         }
 
@@ -97,10 +87,18 @@ namespace TPWinForm
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnNextImage_Click(object sender, EventArgs e)
         {
-
+            imageConector.Next();
+            showImage(imageConector.GetCurremtImg());
         }
+
+        private void btnPrevImage_Click(object sender, EventArgs e)
+        {
+            imageConector.Previous();
+            showImage(imageConector.GetCurremtImg());
+        }
+
 
         private void btnModArticle_Click(object sender, EventArgs e)
         {
@@ -115,7 +113,7 @@ namespace TPWinForm
                     select = (Article)dgvPrincipal.CurrentRow.DataBoundItem;
                     AddArticleFom mod = new AddArticleFom(select);
                     mod.ShowDialog();
-                    cargar();
+                    load();
                 }
             }
 
@@ -140,7 +138,7 @@ namespace TPWinForm
                 {
                     selected = (Article)dgvPrincipal.CurrentRow.DataBoundItem;
                     articulo.eliminar(selected.ArticleId);
-                    cargar();
+                    load();
                 }
             }
             catch (Exception ex)
@@ -225,5 +223,6 @@ namespace TPWinForm
         {
 
         }
+
     }
 }

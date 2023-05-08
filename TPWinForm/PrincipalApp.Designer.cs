@@ -37,12 +37,11 @@
             this.Delete = new System.Windows.Forms.Button();
             this.lblFilter = new System.Windows.Forms.Label();
             this.txtFilter = new System.Windows.Forms.TextBox();
-            this.btnFilter = new System.Windows.Forms.Button();
-            this.lblAdvancedFilter = new System.Windows.Forms.Label();
             this.cboBrand = new System.Windows.Forms.ComboBox();
             this.cboCategory = new System.Windows.Forms.ComboBox();
-            this.txtAdvancedFilter = new System.Windows.Forms.TextBox();
             this.btnAdvancedSearch = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrincipal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxArticle)).BeginInit();
             this.SuspendLayout();
@@ -53,7 +52,7 @@
             this.btnAddArticle.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAddArticle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddArticle.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnAddArticle.Location = new System.Drawing.Point(294, 22);
+            this.btnAddArticle.Location = new System.Drawing.Point(117, 77);
             this.btnAddArticle.Name = "btnAddArticle";
             this.btnAddArticle.Size = new System.Drawing.Size(75, 23);
             this.btnAddArticle.TabIndex = 0;
@@ -65,7 +64,7 @@
             // 
             this.dgvPrincipal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPrincipal.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgvPrincipal.Location = new System.Drawing.Point(26, 51);
+            this.dgvPrincipal.Location = new System.Drawing.Point(25, 106);
             this.dgvPrincipal.MultiSelect = false;
             this.dgvPrincipal.Name = "dgvPrincipal";
             this.dgvPrincipal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -76,7 +75,7 @@
             // pbxArticle
             // 
             this.pbxArticle.BackColor = System.Drawing.Color.White;
-            this.pbxArticle.Location = new System.Drawing.Point(169, 229);
+            this.pbxArticle.Location = new System.Drawing.Point(169, 284);
             this.pbxArticle.Name = "pbxArticle";
             this.pbxArticle.Size = new System.Drawing.Size(215, 175);
             this.pbxArticle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -86,7 +85,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(366, 307);
+            this.button1.Location = new System.Drawing.Point(374, 362);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 3;
@@ -100,7 +99,7 @@
             this.btnModArticle.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnModArticle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModArticle.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnModArticle.Location = new System.Drawing.Point(378, 22);
+            this.btnModArticle.Location = new System.Drawing.Point(237, 77);
             this.btnModArticle.Name = "btnModArticle";
             this.btnModArticle.Size = new System.Drawing.Size(75, 23);
             this.btnModArticle.TabIndex = 4;
@@ -110,11 +109,12 @@
             // 
             // Delete
             // 
-            this.Delete.BackColor = System.Drawing.Color.SkyBlue;
+            this.Delete.BackColor = System.Drawing.Color.Red;
             this.Delete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Delete.ForeColor = System.Drawing.Color.Black;
             this.Delete.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Delete.Location = new System.Drawing.Point(459, 22);
+            this.Delete.Location = new System.Drawing.Point(350, 77);
             this.Delete.Name = "Delete";
             this.Delete.Size = new System.Drawing.Size(75, 23);
             this.Delete.TabIndex = 5;
@@ -125,7 +125,7 @@
             // lblFilter
             // 
             this.lblFilter.AutoSize = true;
-            this.lblFilter.Location = new System.Drawing.Point(26, 31);
+            this.lblFilter.Location = new System.Drawing.Point(12, 26);
             this.lblFilter.Name = "lblFilter";
             this.lblFilter.Size = new System.Drawing.Size(29, 13);
             this.lblFilter.TabIndex = 7;
@@ -133,61 +133,29 @@
             // 
             // txtFilter
             // 
-            this.txtFilter.Location = new System.Drawing.Point(61, 24);
+            this.txtFilter.Location = new System.Drawing.Point(47, 23);
             this.txtFilter.Name = "txtFilter";
-            this.txtFilter.Size = new System.Drawing.Size(100, 20);
+            this.txtFilter.Size = new System.Drawing.Size(93, 20);
             this.txtFilter.TabIndex = 8;
             this.txtFilter.TextChanged += new System.EventHandler(this.txtFilter_TextChanged);
-            // 
-            // btnFilter
-            // 
-            this.btnFilter.BackColor = System.Drawing.Color.SkyBlue;
-            this.btnFilter.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFilter.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnFilter.Location = new System.Drawing.Point(169, 22);
-            this.btnFilter.Name = "btnFilter";
-            this.btnFilter.Size = new System.Drawing.Size(75, 23);
-            this.btnFilter.TabIndex = 9;
-            this.btnFilter.Text = "Search";
-            this.btnFilter.UseVisualStyleBackColor = false;
-            this.btnFilter.Click += new System.EventHandler(this.btnFilter_Click);
-            // 
-            // lblAdvancedFilter
-            // 
-            this.lblAdvancedFilter.AutoSize = true;
-            this.lblAdvancedFilter.Location = new System.Drawing.Point(26, 437);
-            this.lblAdvancedFilter.Name = "lblAdvancedFilter";
-            this.lblAdvancedFilter.Size = new System.Drawing.Size(81, 13);
-            this.lblAdvancedFilter.TabIndex = 10;
-            this.lblAdvancedFilter.Text = "Advanced Filter";
             // 
             // cboBrand
             // 
             this.cboBrand.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboBrand.FormattingEnabled = true;
-            this.cboBrand.Location = new System.Drawing.Point(113, 433);
+            this.cboBrand.Location = new System.Drawing.Point(187, 22);
             this.cboBrand.Name = "cboBrand";
             this.cboBrand.Size = new System.Drawing.Size(100, 21);
             this.cboBrand.TabIndex = 11;
-           
             // 
             // cboCategory
             // 
             this.cboCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboCategory.FormattingEnabled = true;
-            this.cboCategory.Location = new System.Drawing.Point(219, 434);
+            this.cboCategory.Location = new System.Drawing.Point(350, 23);
             this.cboCategory.Name = "cboCategory";
             this.cboCategory.Size = new System.Drawing.Size(99, 21);
             this.cboCategory.TabIndex = 12;
-            // 
-            // txtAdvancedFilter
-            // 
-            this.txtAdvancedFilter.Location = new System.Drawing.Point(324, 434);
-            this.txtAdvancedFilter.Name = "txtAdvancedFilter";
-            this.txtAdvancedFilter.Size = new System.Drawing.Size(110, 20);
-            this.txtAdvancedFilter.TabIndex = 13;
-            this.txtAdvancedFilter.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // btnAdvancedSearch
             // 
@@ -195,25 +163,44 @@
             this.btnAdvancedSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAdvancedSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdvancedSearch.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnAdvancedSearch.Location = new System.Drawing.Point(440, 433);
+            this.btnAdvancedSearch.Location = new System.Drawing.Point(458, 22);
             this.btnAdvancedSearch.Name = "btnAdvancedSearch";
-            this.btnAdvancedSearch.Size = new System.Drawing.Size(75, 23);
+            this.btnAdvancedSearch.Size = new System.Drawing.Size(75, 22);
             this.btnAdvancedSearch.TabIndex = 14;
             this.btnAdvancedSearch.Text = "Search";
             this.btnAdvancedSearch.UseVisualStyleBackColor = false;
             this.btnAdvancedSearch.Click += new System.EventHandler(this.btnAdvancedSearch_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(146, 26);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "Brand";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(295, 26);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(49, 13);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "Category";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // PrincipalApp
             // 
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(554, 471);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnAdvancedSearch);
-            this.Controls.Add(this.txtAdvancedFilter);
             this.Controls.Add(this.cboCategory);
             this.Controls.Add(this.cboBrand);
-            this.Controls.Add(this.lblAdvancedFilter);
-            this.Controls.Add(this.btnFilter);
             this.Controls.Add(this.txtFilter);
             this.Controls.Add(this.lblFilter);
             this.Controls.Add(this.Delete);
@@ -247,12 +234,11 @@
         private System.Windows.Forms.Button Delete;
         private System.Windows.Forms.Label lblFilter;
         private System.Windows.Forms.TextBox txtFilter;
-        private System.Windows.Forms.Button btnFilter;
-        private System.Windows.Forms.Label lblAdvancedFilter;
         private System.Windows.Forms.ComboBox cboBrand;
         private System.Windows.Forms.ComboBox cboCategory;
-        private System.Windows.Forms.TextBox txtAdvancedFilter;
         private System.Windows.Forms.Button btnAdvancedSearch;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
 

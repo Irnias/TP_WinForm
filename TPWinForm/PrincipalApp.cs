@@ -134,10 +134,7 @@ namespace TPWinForm
 
       
 
-        private void btnFilter_Click(object sender, EventArgs e)
-        {
-       
-        }
+     
 
         private void txtFilter_TextChanged(object sender, EventArgs e)
         {
@@ -154,6 +151,8 @@ namespace TPWinForm
                 FilterList = listArticle;
             }
 
+
+
             dgvPrincipal.DataSource = null;
             dgvPrincipal.DataSource = FilterList;
             hideColumns();
@@ -161,40 +160,52 @@ namespace TPWinForm
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            List<Article> FilterList;
-            string filter = txtFilter.Text;
-
-            if (filter.Length >= 3)
-            {
-                FilterList = listArticle.FindAll(x => x.Name.ToUpper().Contains(filter.ToUpper()) || x.Description.ToUpper().Contains(filter.ToUpper()));
-            }
-
-            else
-            {
-                FilterList = listArticle;
-            }
-
-            dgvPrincipal.DataSource = null;
-            dgvPrincipal.DataSource = FilterList;
-            hideColumns();
+           
         }
 
        
+        private bool validarFiltro()
+        {
+            if (cboBrand.SelectedIndex < 0)
+            {
+                MessageBox.Show("Seleccione una marca");
+                return true;
+            }
+            if (cboCategory.SelectedIndex < 0)
+            {
+                MessageBox.Show("Seleccione una categoria");
+                return true;
+            }
+            return false;
+        }
+
         private void btnAdvancedSearch_Click(object sender, EventArgs e)
         {
             ArticleConector art = new ArticleConector();
             try
             {
+                if (validarFiltro())
+                    return;
                 string brand = cboBrand.SelectedItem.ToString();
                 string category = cboCategory.SelectedItem.ToString();
-                string filter = txtAdvancedFilter.Text;
-                dgvPrincipal.DataSource = art.filtrar(brand, category, filter);
+                //string filter = txtFilter.Text;
+                dgvPrincipal.DataSource = art.filtrar(brand, category);
             }
             catch (Exception ex)
             {
 
                 MessageBox.Show(ex.ToString());
             }
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

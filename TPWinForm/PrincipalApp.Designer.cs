@@ -82,7 +82,6 @@
             this.pbxArticle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxArticle.TabIndex = 2;
             this.pbxArticle.TabStop = false;
-            this.pbxArticle.Click += new System.EventHandler(this.pbxArticle_Click);
             // 
             // btnNextImage
             // 

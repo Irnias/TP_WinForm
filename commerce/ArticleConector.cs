@@ -13,11 +13,8 @@ namespace domain
 
             try
             {
-                string query = "SELECT a.ID as artId, a.nombre as name, a.descripcion as artDescrip, a.Codigo as artCode, a.precio as price, c.Descripcion as category, c.Id as categoryId, " +
-                    "m.Descripcion as brand, m.id as brandId, STRING_AGG(i.imagenUrl, ',') AS imagen FROM Articulos a LEFT JOIN Imagenes i ON a.ID = i.idArticulo " +
-                    "LEFT JOIN CATEGORIAS c ON a.IdCategoria = c.Id LEFT JOIN MARCAS m on m.Id = a.IdMarca " +
-                    "GROUP BY a.ID, a.nombre, a.Codigo, a.descripcion, a.precio, c.Descripcion, c.Id, m.Descripcion, m.Id order by a.id ";
-                data.setQuery(query);
+                data.setQuery("Select A.Id as artId, Nombre as name, A.Descripcion as artDescrip, Codigo as artCode, Precio as price, C.Descripcion as category, A.IdCategoria as categoryId, " +
+                    "M.Descripcion as brand, A.IdMarca as brandId From ARTICULOS A, CATEGORIAS C, MARCAS M Where C.Id = A.IdCategoria And M.Id = A.IdMarca");
                 data.execute();
 
                 while (data.sqlReader.Read())
@@ -36,7 +33,6 @@ namespace domain
                         (!(data.sqlReader["brandId"] is DBNull)) ? (int)data.sqlReader["brandId"] : 0,
                         (!(data.sqlReader["brand"] is DBNull)) ?(string)data.sqlReader["brand"] : ""
                         );
-                    aux.Image = (!(data.sqlReader["imagen"] is DBNull)) ? (string)data.sqlReader["imagen"] : "";
               
                     ArticlesList.Add(aux);
                 }

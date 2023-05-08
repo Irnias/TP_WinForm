@@ -25,7 +25,7 @@ namespace commerce
 
         public void Next()
         {
-            if (_imageIndex < (this._images.Count -1)) { this._imageIndex++; }
+            if (_imageIndex < (this._images.Count - 1)) { this._imageIndex++; } else { this._imageIndex = 0; }
         }
 
         public void Previous()

@@ -82,11 +82,6 @@ namespace TPWinForm
 
         }
 
-        private void pbxArticle_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnNextImage_Click(object sender, EventArgs e)
         {
             imageConector.Next();

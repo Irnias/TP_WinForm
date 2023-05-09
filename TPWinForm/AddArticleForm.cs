@@ -193,5 +193,10 @@ namespace TPWinForm
             }
             return false;
         }
+
+        private void Description_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

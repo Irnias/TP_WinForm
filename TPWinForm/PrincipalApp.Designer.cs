@@ -45,17 +45,21 @@
             this.btnPrevImage = new System.Windows.Forms.Button();
             this.lblFiltroAvanzado = new System.Windows.Forms.Label();
             this.txtFiltroAvanzado = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrincipal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxArticle)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAddArticle
             // 
-            this.btnAddArticle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(89)))), ((int)(((byte)(54)))));
+            this.btnAddArticle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(155)))), ((int)(((byte)(102)))));
             this.btnAddArticle.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAddArticle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddArticle.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnAddArticle.Location = new System.Drawing.Point(55, 444);
+            this.btnAddArticle.Location = new System.Drawing.Point(95, 313);
             this.btnAddArticle.Name = "btnAddArticle";
             this.btnAddArticle.Size = new System.Drawing.Size(75, 23);
             this.btnAddArticle.TabIndex = 0;
@@ -65,21 +69,21 @@
             // 
             // dgvPrincipal
             // 
-            this.dgvPrincipal.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(191)))), ((int)(((byte)(128)))));
+            this.dgvPrincipal.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(227)))), ((int)(((byte)(204)))));
             this.dgvPrincipal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPrincipal.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgvPrincipal.Location = new System.Drawing.Point(12, 49);
+            this.dgvPrincipal.Location = new System.Drawing.Point(15, 69);
             this.dgvPrincipal.MultiSelect = false;
             this.dgvPrincipal.Name = "dgvPrincipal";
             this.dgvPrincipal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPrincipal.Size = new System.Drawing.Size(508, 172);
+            this.dgvPrincipal.Size = new System.Drawing.Size(517, 172);
             this.dgvPrincipal.TabIndex = 1;
             this.dgvPrincipal.SelectionChanged += new System.EventHandler(this.dgvPrincipal_SelectionChanged);
             // 
             // pbxArticle
             // 
-            this.pbxArticle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(191)))), ((int)(((byte)(128)))));
-            this.pbxArticle.Location = new System.Drawing.Point(169, 263);
+            this.pbxArticle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(227)))), ((int)(((byte)(204)))));
+            this.pbxArticle.Location = new System.Drawing.Point(560, 69);
             this.pbxArticle.Name = "pbxArticle";
             this.pbxArticle.Size = new System.Drawing.Size(215, 175);
             this.pbxArticle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -88,21 +92,22 @@
             // 
             // btnNextImage
             // 
-            this.btnNextImage.Location = new System.Drawing.Point(374, 362);
+            this.btnNextImage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(108)))), ((int)(((byte)(143)))));
+            this.btnNextImage.Location = new System.Drawing.Point(769, 141);
             this.btnNextImage.Name = "btnNextImage";
             this.btnNextImage.Size = new System.Drawing.Size(25, 22);
             this.btnNextImage.TabIndex = 3;
             this.btnNextImage.Text = ">";
-            this.btnNextImage.UseVisualStyleBackColor = true;
+            this.btnNextImage.UseVisualStyleBackColor = false;
             this.btnNextImage.Click += new System.EventHandler(this.btnNextImage_Click);
             // 
             // btnModArticle
             // 
-            this.btnModArticle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(89)))), ((int)(((byte)(54)))));
+            this.btnModArticle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(155)))), ((int)(((byte)(102)))));
             this.btnModArticle.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnModArticle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModArticle.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnModArticle.Location = new System.Drawing.Point(236, 444);
+            this.btnModArticle.Location = new System.Drawing.Point(247, 313);
             this.btnModArticle.Name = "btnModArticle";
             this.btnModArticle.Size = new System.Drawing.Size(75, 23);
             this.btnModArticle.TabIndex = 4;
@@ -112,12 +117,12 @@
             // 
             // Delete
             // 
-            this.Delete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(89)))), ((int)(((byte)(54)))));
+            this.Delete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(155)))), ((int)(((byte)(102)))));
             this.Delete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Delete.ForeColor = System.Drawing.Color.Black;
             this.Delete.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Delete.Location = new System.Drawing.Point(420, 444);
+            this.Delete.Location = new System.Drawing.Point(396, 313);
             this.Delete.Name = "Delete";
             this.Delete.Size = new System.Drawing.Size(75, 23);
             this.Delete.TabIndex = 5;
@@ -128,17 +133,18 @@
             // lblFilter
             // 
             this.lblFilter.AutoSize = true;
-            this.lblFilter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.lblFilter.Location = new System.Drawing.Point(12, 26);
+            this.lblFilter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(186)))), ((int)(((byte)(187)))));
+            this.lblFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFilter.Location = new System.Drawing.Point(12, 35);
             this.lblFilter.Name = "lblFilter";
-            this.lblFilter.Size = new System.Drawing.Size(29, 13);
+            this.lblFilter.Size = new System.Drawing.Size(34, 15);
             this.lblFilter.TabIndex = 7;
             this.lblFilter.Text = "Filter";
             // 
             // txtFilter
             // 
-            this.txtFilter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(191)))), ((int)(((byte)(128)))));
-            this.txtFilter.Location = new System.Drawing.Point(47, 23);
+            this.txtFilter.BackColor = System.Drawing.SystemColors.Info;
+            this.txtFilter.Location = new System.Drawing.Point(56, 32);
             this.txtFilter.Name = "txtFilter";
             this.txtFilter.Size = new System.Drawing.Size(93, 20);
             this.txtFilter.TabIndex = 8;
@@ -146,10 +152,10 @@
             // 
             // cboCampo
             // 
-            this.cboCampo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(191)))), ((int)(((byte)(128)))));
+            this.cboCampo.BackColor = System.Drawing.SystemColors.Menu;
             this.cboCampo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboCampo.FormattingEnabled = true;
-            this.cboCampo.Location = new System.Drawing.Point(55, 236);
+            this.cboCampo.Location = new System.Drawing.Point(59, 267);
             this.cboCampo.Name = "cboCampo";
             this.cboCampo.Size = new System.Drawing.Size(100, 21);
             this.cboCampo.TabIndex = 11;
@@ -157,21 +163,21 @@
             // 
             // cboCriterio
             // 
-            this.cboCriterio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(191)))), ((int)(((byte)(128)))));
+            this.cboCriterio.BackColor = System.Drawing.SystemColors.Menu;
             this.cboCriterio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboCriterio.FormattingEnabled = true;
-            this.cboCriterio.Location = new System.Drawing.Point(212, 236);
+            this.cboCriterio.Location = new System.Drawing.Point(238, 267);
             this.cboCriterio.Name = "cboCriterio";
             this.cboCriterio.Size = new System.Drawing.Size(99, 21);
             this.cboCriterio.TabIndex = 12;
             // 
             // btnAdvancedSearch
             // 
-            this.btnAdvancedSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(89)))), ((int)(((byte)(54)))));
+            this.btnAdvancedSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(195)))), ((int)(((byte)(161)))));
             this.btnAdvancedSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAdvancedSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdvancedSearch.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnAdvancedSearch.Location = new System.Drawing.Point(474, 237);
+            this.btnAdvancedSearch.Location = new System.Drawing.Point(548, 266);
             this.btnAdvancedSearch.Name = "btnAdvancedSearch";
             this.btnAdvancedSearch.Size = new System.Drawing.Size(75, 22);
             this.btnAdvancedSearch.TabIndex = 14;
@@ -182,53 +188,83 @@
             // lblCampo
             // 
             this.lblCampo.AutoSize = true;
-            this.lblCampo.Location = new System.Drawing.Point(9, 239);
+            this.lblCampo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(194)))), ((int)(((byte)(181)))));
+            this.lblCampo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCampo.Location = new System.Drawing.Point(6, 273);
             this.lblCampo.Name = "lblCampo";
-            this.lblCampo.Size = new System.Drawing.Size(40, 13);
+            this.lblCampo.Size = new System.Drawing.Size(47, 15);
             this.lblCampo.TabIndex = 15;
             this.lblCampo.Text = "Campo";
             // 
             // lblCriterio
             // 
             this.lblCriterio.AutoSize = true;
-            this.lblCriterio.Location = new System.Drawing.Point(166, 239);
+            this.lblCriterio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(194)))), ((int)(((byte)(181)))));
+            this.lblCriterio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCriterio.Location = new System.Drawing.Point(180, 273);
             this.lblCriterio.Name = "lblCriterio";
-            this.lblCriterio.Size = new System.Drawing.Size(39, 13);
+            this.lblCriterio.Size = new System.Drawing.Size(46, 15);
             this.lblCriterio.TabIndex = 16;
             this.lblCriterio.Text = "Criterio";
             // 
             // btnPrevImage
             // 
-            this.btnPrevImage.Location = new System.Drawing.Point(156, 362);
+            this.btnPrevImage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(108)))), ((int)(((byte)(143)))));
+            this.btnPrevImage.Location = new System.Drawing.Point(548, 141);
             this.btnPrevImage.Name = "btnPrevImage";
             this.btnPrevImage.Size = new System.Drawing.Size(25, 22);
             this.btnPrevImage.TabIndex = 17;
             this.btnPrevImage.Text = "<";
-            this.btnPrevImage.UseVisualStyleBackColor = true;
+            this.btnPrevImage.UseVisualStyleBackColor = false;
             this.btnPrevImage.Click += new System.EventHandler(this.btnPrevImage_Click);
             // 
             // lblFiltroAvanzado
             // 
             this.lblFiltroAvanzado.AutoSize = true;
-            this.lblFiltroAvanzado.Location = new System.Drawing.Point(333, 240);
+            this.lblFiltroAvanzado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(186)))), ((int)(((byte)(187)))));
+            this.lblFiltroAvanzado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFiltroAvanzado.ForeColor = System.Drawing.Color.Black;
+            this.lblFiltroAvanzado.Location = new System.Drawing.Point(360, 269);
             this.lblFiltroAvanzado.Name = "lblFiltroAvanzado";
-            this.lblFiltroAvanzado.Size = new System.Drawing.Size(29, 13);
+            this.lblFiltroAvanzado.Size = new System.Drawing.Size(34, 15);
             this.lblFiltroAvanzado.TabIndex = 18;
             this.lblFiltroAvanzado.Text = "Filter\r\n";
             // 
             // txtFiltroAvanzado
             // 
-            this.txtFiltroAvanzado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(191)))), ((int)(((byte)(128)))));
-            this.txtFiltroAvanzado.Location = new System.Drawing.Point(368, 237);
+            this.txtFiltroAvanzado.BackColor = System.Drawing.SystemColors.Menu;
+            this.txtFiltroAvanzado.Location = new System.Drawing.Point(409, 268);
             this.txtFiltroAvanzado.Name = "txtFiltroAvanzado";
             this.txtFiltroAvanzado.Size = new System.Drawing.Size(100, 20);
             this.txtFiltroAvanzado.TabIndex = 19;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(155, 26);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(30, 26);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 20;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(638, 262);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(30, 26);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 21;
+            this.pictureBox2.TabStop = false;
+            // 
             // PrincipalApp
             // 
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(121)))), ((int)(((byte)(126)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(554, 471);
+            this.ClientSize = new System.Drawing.Size(804, 361);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtFiltroAvanzado);
             this.Controls.Add(this.lblFiltroAvanzado);
             this.Controls.Add(this.btnPrevImage);
@@ -246,8 +282,8 @@
             this.Controls.Add(this.dgvPrincipal);
             this.Controls.Add(this.btnAddArticle);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(575, 510);
-            this.MinimumSize = new System.Drawing.Size(510, 510);
+            this.MaximumSize = new System.Drawing.Size(820, 400);
+            this.MinimumSize = new System.Drawing.Size(820, 400);
             this.Name = "PrincipalApp";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -255,6 +291,8 @@
             this.Load += new System.EventHandler(this.LoadPrincipalApp);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrincipal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxArticle)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -278,6 +316,8 @@
         private System.Windows.Forms.Button btnPrevImage;
         private System.Windows.Forms.Label lblFiltroAvanzado;
         private System.Windows.Forms.TextBox txtFiltroAvanzado;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
 

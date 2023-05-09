@@ -54,6 +54,7 @@
             // ArticleCode
             // 
             resources.ApplyResources(this.ArticleCode, "ArticleCode");
+            this.ArticleCode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(195)))), ((int)(((byte)(161)))));
             this.ArticleCode.Name = "ArticleCode";
             // 
             // txtArticleCode
@@ -69,6 +70,7 @@
             // ArticleName
             // 
             resources.ApplyResources(this.ArticleName, "ArticleName");
+            this.ArticleName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(195)))), ((int)(((byte)(161)))));
             this.ArticleName.Name = "ArticleName";
             // 
             // txtArticleDescription
@@ -79,16 +81,19 @@
             // Description
             // 
             resources.ApplyResources(this.Description, "Description");
+            this.Description.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(195)))), ((int)(((byte)(161)))));
             this.Description.Name = "Description";
             // 
             // labelBrand
             // 
             resources.ApplyResources(this.labelBrand, "labelBrand");
+            this.labelBrand.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(195)))), ((int)(((byte)(161)))));
             this.labelBrand.Name = "labelBrand";
             // 
             // labelImage
             // 
             resources.ApplyResources(this.labelImage, "labelImage");
+            this.labelImage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(195)))), ((int)(((byte)(161)))));
             this.labelImage.Name = "labelImage";
             // 
             // cboBrand
@@ -108,6 +113,7 @@
             // labelCategory
             // 
             resources.ApplyResources(this.labelCategory, "labelCategory");
+            this.labelCategory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(195)))), ((int)(((byte)(161)))));
             this.labelCategory.Name = "labelCategory";
             // 
             // txtArticlePrice
@@ -118,31 +124,36 @@
             // labelPrice
             // 
             resources.ApplyResources(this.labelPrice, "labelPrice");
+            this.labelPrice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(195)))), ((int)(((byte)(161)))));
             this.labelPrice.Name = "labelPrice";
             // 
             // pbxImages
             // 
+            this.pbxImages.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(227)))), ((int)(((byte)(204)))));
             resources.ApplyResources(this.pbxImages, "pbxImages");
             this.pbxImages.Name = "pbxImages";
             this.pbxImages.TabStop = false;
             // 
             // btnSave
             // 
+            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(186)))), ((int)(((byte)(187)))));
             resources.ApplyResources(this.btnSave, "btnSave");
             this.btnSave.Name = "btnSave";
-            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnCancelAddArticle
             // 
+            this.btnCancelAddArticle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(186)))), ((int)(((byte)(187)))));
             resources.ApplyResources(this.btnCancelAddArticle, "btnCancelAddArticle");
             this.btnCancelAddArticle.Name = "btnCancelAddArticle";
-            this.btnCancelAddArticle.UseVisualStyleBackColor = true;
+            this.btnCancelAddArticle.UseVisualStyleBackColor = false;
             this.btnCancelAddArticle.Click += new System.EventHandler(this.btnCancellAddArticle);
             // 
             // label1
             // 
             resources.ApplyResources(this.label1, "label1");
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(195)))), ((int)(((byte)(161)))));
             this.label1.Name = "label1";
             // 
             // txtUrlImage
@@ -153,15 +164,17 @@
             // 
             // btnAddImage
             // 
+            this.btnAddImage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(93)))), ((int)(((byte)(93)))));
             resources.ApplyResources(this.btnAddImage, "btnAddImage");
             this.btnAddImage.Name = "btnAddImage";
-            this.btnAddImage.UseVisualStyleBackColor = true;
+            this.btnAddImage.UseVisualStyleBackColor = false;
             this.btnAddImage.Click += new System.EventHandler(this.btnAddImage_Click);
             // 
             // AddArticleFom
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(195)))), ((int)(((byte)(161)))));
             this.Controls.Add(this.btnAddImage);
             this.Controls.Add(this.txtUrlImage);
             this.Controls.Add(this.label1);

@@ -481,7 +481,7 @@
     <value>5</value>
   </data>
   <data name="btnSave.Location" type="System.Drawing.Point, System.Drawing">
-    <value>156, 255</value>
+    <value>184, 255</value>
   </data>
   <data name="btnSave.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
@@ -505,7 +505,7 @@
     <value>4</value>
   </data>
   <data name="btnCancelAddArticle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>45, 255</value>
+    <value>59, 255</value>
   </data>
   <data name="btnCancelAddArticle.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
@@ -532,13 +532,13 @@
     <value>True</value>
   </data>
   <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
+    <value>Microsoft Sans Serif, 14.25pt, style=Underline</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
     <value>180, 9</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>88, 20</value>
+    <value>106, 24</value>
   </data>
   <data name="label1.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>

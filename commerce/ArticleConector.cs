@@ -125,72 +125,57 @@ namespace domain
             DataAccess data = new DataAccess();
             try
             {
-                string consulta = "Select A.Id artId, A.Codigo cod, A.Nombre name, A.Descripcion descrip, A.Precio price, M.Descripcion brand, M.Id brandId, C.Descripcion category, C.Id categoryId From ARTICULOS A, MARCAS M, CATEGORIAS C where A.IdCategoria = A.Id and A.Id = A.IdMarca and   ";
 
+                string consulta = "Select A.Id as artId, A.Nombre, A.Descripcion as artDescrip, Codigo as artCode, Precio as price, C.Descripcion as category, A.IdCategoria as categoryId, " +
+                    "M.Descripcion as brand, A.IdMarca as brandId From ARTICULOS A, CATEGORIAS C, MARCAS M Where C.Id = A.IdCategoria And M.Id = A.IdMarca AND ";
                 if (campo == "Precio")
                 {
                     switch (criterio)
                     {
                         case "Mayor a":
-                            consulta += "price > " + filter;
+                            consulta += "Precio > " + filter;
                             break;
-                        case "Menor A":
-                            consulta += "price < " + filter;
+                        case "Menor a":
+                            consulta += "Precio < " + filter;
                             break;
                         case "Descripcion":
-                            consulta += "price = " + filter;
+                            consulta += "Precio = " + filter;
                             break;
                     }
-                }
-                else if (campo == "Nombre")
-                {
+                }else{
                     switch (criterio)
                     {
                         case "Comienza con":
-                            consulta += "name like '" + filter + "%'";
-
+                            consulta += "A." + campo + " like '" + filter + "%' ";
                             break;
                         case "Termina con":
-                            consulta += "name like '%'" + filter + "'";
+                            consulta += "A." + campo + " like '%" + filter + "'";
                             break;
                         case "Contiene":
-                            consulta += "name like '%" + filter + "%'";
+                            consulta += "A." + campo + " like '%" + filter + "%' ";
                             break;
                     }
                 }
-                else if(category == "Descripcion")
-                    switch (category)
-                    {
-                        case "Que comience con ":
-                            consulta += "A.Descripcion like '" + filter + "%' ";
-                            break;
-                        case "Que contenga ":
-                            consulta += "A.Descripcion like '%" + filter + "%'";
-                            break;
-                        case "Que termine con ":
-                            consulta += "A.Descripcion like '%" + filter + "'";
-                            break;
-                    }
 
                 data.setQuery(consulta);
                 data.execute();
                 while (data.sqlReader.Read())
                 {
+
                     Article aux = new Article();
-                    aux.ArticleId = (int)data.sqlReader["artId"];
-                    aux.Price = (int)data.sqlReader["price"];
-                    aux.ArticleCode = (string)data.sqlReader["cod"];
-                    aux.Name = (string)data.sqlReader["name"];
-                    aux.Description = (string)data.sqlReader["descrip"];
-
-                    aux.ArticleBrand = new Brand();
-                    aux.ArticleBrand.Description = (string)data.sqlReader["brand"];
-                    aux.ArticleBrand.Id = (int)data.sqlReader["brandId"];
-
-                    aux.ArticleCategory = new Category();
-                    aux.ArticleCategory.Id = (int)data.sqlReader["categoryId"];
-                    aux.ArticleCategory.Description = (string)data.sqlReader["category"];
-
+                    aux.ArticleId = (!(data.sqlReader["artId"] is DBNull)) ? (int)data.sqlReader["artId"] : 0;
+                    aux.Name = (!(data.sqlReader["Nombre"] is DBNull)) ? (string)data.sqlReader["Nombre"] : "";
+                    aux.Description = (!(data.sqlReader["artDescrip"] is DBNull)) ? (string)data.sqlReader["artDescrip"] : "";
+                    aux.ArticleCode = (!(data.sqlReader["artCode"] is DBNull)) ? (string)data.sqlReader["artCode"] : "";
+                    aux.Price = (!(data.sqlReader["price"] is DBNull)) ? (decimal)data.sqlReader["price"] : 0;
+                    aux.ArticleCategory = new Category(
+                        (!(data.sqlReader["categoryId"] is DBNull)) ? (int)data.sqlReader["categoryId"] : 0,
+                        (!(data.sqlReader["category"] is DBNull)) ? (string)data.sqlReader["category"] : ""
+                        );
+                    aux.ArticleBrand = new Brand(
+                        (!(data.sqlReader["brandId"] is DBNull)) ? (int)data.sqlReader["brandId"] : 0,
+                        (!(data.sqlReader["brand"] is DBNull)) ? (string)data.sqlReader["brand"] : ""
+                        );
 
                     list.Add(aux);
                 }

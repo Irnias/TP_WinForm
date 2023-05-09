@@ -99,7 +99,8 @@ namespace TPWinForm
                 {
                     MessageBox.Show("Eliga un articulo para continuar");
                 }
-                else { 
+                else
+                {
                     select = (Article)dgvPrincipal.CurrentRow.DataBoundItem;
                     AddArticleFom mod = new AddArticleFom(select);
                     mod.ShowDialog();
@@ -110,12 +111,12 @@ namespace TPWinForm
             catch (Exception ex)
             {
                 MessageBox.Show("Eliga un articulo para continuar");
-               
+
             }
         }
 
-        
-        
+
+
 
         private void Delete_Click(object sender, EventArgs e)
         {
@@ -138,20 +139,20 @@ namespace TPWinForm
             }
         }
 
-      
 
-     
+
+
 
         private void txtFilter_TextChanged(object sender, EventArgs e)
         {
             List<Article> FilterList;
             string filter = txtFilter.Text;
 
-            if (filter.Length >=3 )
+            if (filter.Length >= 3)
             {
                 FilterList = listArticle.FindAll(x => x.Name.ToUpper().Contains(filter.ToUpper()) || x.Description.ToUpper().Contains(filter.ToUpper()));
             }
-        
+
             else
             {
                 FilterList = listArticle;
@@ -166,23 +167,49 @@ namespace TPWinForm
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-           
+
         }
 
-       
+
         private bool validarFiltro()
         {
             if (cboCampo.SelectedIndex < 0)
             {
-                MessageBox.Show("Seleccione una marca");
+                MessageBox.Show("Seleccione un campo para poder filtrar");
                 return true;
             }
             if (cboCriterio.SelectedIndex < 0)
             {
-                MessageBox.Show("Seleccione una categoria");
+                MessageBox.Show("Seleccione un criterio de filtrado");
                 return true;
             }
+            if (txtFiltroAvanzado.Text == "")
+            {
+                MessageBox.Show("El campo filter no puede estar vacio.");
+                return true;
+            }
+
+            if (cboCampo.SelectedItem.ToString() == "Precio")
+            {
+                if (!validateIsNumber(txtFiltroAvanzado.Text))
+                {
+                    MessageBox.Show("Si filtras por precio, solo son validos los numeros.");
+                    return true;
+                }
+            }
             return false;
+        }
+
+        private bool validateIsNumber(string str)
+        {
+            foreach (char c in str)
+            {
+                if (!char.IsNumber(c))
+                {
+                    return false;
+                }
+            };
+            return true;
         }
 
         private void btnAdvancedSearch_Click(object sender, EventArgs e)
@@ -190,7 +217,10 @@ namespace TPWinForm
             ArticleConector art = new ArticleConector();
             try
             {
-   
+                if (validarFiltro())
+                {
+                    return;
+                }
                 string campo = cboCampo.SelectedItem.ToString();
                 string criterio = cboCriterio.SelectedItem.ToString();
                 string filter = txtFiltroAvanzado.Text;

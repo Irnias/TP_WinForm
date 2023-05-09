@@ -24,16 +24,16 @@ namespace domain
                     aux.Name = (!(data.sqlReader["name"] is DBNull)) ? (string)data.sqlReader["name"] : "";
                     aux.Description = (!(data.sqlReader["artDescrip"] is DBNull)) ? (string)data.sqlReader["artDescrip"] : "";
                     aux.ArticleCode = (!(data.sqlReader["artCode"] is DBNull)) ? (string)data.sqlReader["artCode"] : "";
-                    aux.Price = (!(data.sqlReader["price"] is DBNull)) ? (decimal) data.sqlReader["price"] : 0;
+                    aux.Price = (!(data.sqlReader["price"] is DBNull)) ? (decimal)data.sqlReader["price"] : 0;
                     aux.ArticleCategory = new Category(
                         (!(data.sqlReader["categoryId"] is DBNull)) ? (int)data.sqlReader["categoryId"] : 0,
                         (!(data.sqlReader["category"] is DBNull)) ? (string)data.sqlReader["category"] : ""
                         );
                     aux.ArticleBrand = new Brand(
                         (!(data.sqlReader["brandId"] is DBNull)) ? (int)data.sqlReader["brandId"] : 0,
-                        (!(data.sqlReader["brand"] is DBNull)) ?(string)data.sqlReader["brand"] : ""
+                        (!(data.sqlReader["brand"] is DBNull)) ? (string)data.sqlReader["brand"] : ""
                         );
-              
+
                     ArticlesList.Add(aux);
                 }
                 return ArticlesList;
@@ -83,12 +83,12 @@ namespace domain
 
             try
             {
-                string query = "INSERT INTO ARTICULOS (Codigo, Nombre, Descripcion, IdMarca, Precio) OUTPUT Inserted.ID values('" + newArt.ArticleCode + "', '" + newArt.Name + "', '" + newArt.Description +"', " + newArt.ArticleBrand.Id + ", " +newArt.Price + ")";
+                string query = "INSERT INTO ARTICULOS (Codigo, Nombre, Descripcion, IdMarca, Precio) OUTPUT Inserted.ID values('" + newArt.ArticleCode + "', '" + newArt.Name + "', '" + newArt.Description + "', " + newArt.ArticleBrand.Id + ", " + newArt.Price + ")";
                 acces.setQuery(query);
-                int newArticleId = (int) acces.executeScalar();
+                int newArticleId = (int)acces.executeScalar();
                 acces.ClearQuery();
 
-                acces.setQuery("INSERT INTO IMAGENES (IdArticulo, ImagenUrl) values(" + newArticleId + ", '"+ newArt.Image + "')");
+                acces.setQuery("INSERT INTO IMAGENES (IdArticulo, ImagenUrl) values(" + newArticleId + ", '" + newArt.Image + "')");
                 acces.executeAction();
                 return newArticleId;
             }
@@ -119,9 +119,9 @@ namespace domain
                 throw;
             }
         }
-        public List<Article> filtrar(string brand, string category)
-         {
-        List<Article> list = new List<Article>();
+        public List<Article> filtrar(string brand, string category, string filtro)
+        {
+            List<Article> list = new List<Article>();
             DataAccess data = new DataAccess();
             try
             {
@@ -129,10 +129,10 @@ namespace domain
                     "m.Descripcion as brand, m.id as brandId, STRING_AGG(i.imagenUrl, ',') AS imagen FROM Articulos a LEFT JOIN Imagenes i ON a.ID = i.idArticulo " +
                     "LEFT JOIN CATEGORIAS c ON a.IdCategoria = c.Id LEFT JOIN MARCAS m on m.Id = a.IdMarca " +
                    " GROUP BY a.ID, a.nombre, a.Codigo, a.descripcion, a.precio, c.Descripcion, c.Id,  m.Descripcion, m.Id where ";
-                switch (brand)    
-                { 
+                switch (brand)
+                {
                     case "Samsung":
-                        consulta += "brand like 'Samsung'" ;
+                        consulta += "brand like 'Samsung'";
                         break;
                     case "Sony":
                         consulta += "brand like 'Sony'";
@@ -156,7 +156,7 @@ namespace domain
                         consulta += "c.Descripcion like 'Media'";
                         break;
                     case "Celulares":
-                        consulta += "brand like 'Celulares'" ;
+                        consulta += "brand like 'Celulares'";
                         break;
                 }
 
@@ -186,15 +186,15 @@ namespace domain
             }
             catch (Exception ex)
             {
-        
+
                 throw ex;
             }
-        
-        
+
+
         }
 
     }
 
-    
+
 }
 

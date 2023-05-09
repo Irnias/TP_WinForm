@@ -27,9 +27,9 @@ namespace TPWinForm
         private void LoadPrincipalApp(object sender, EventArgs e)
         {
             load();
-            cboBrand.Items.Add("Precio");
-            cboBrand.Items.Add("Nombre");
-            cboBrand.Items.Add("Descripcion");
+            cboCampo.Items.Add("Precio");
+            cboCampo.Items.Add("Nombre");
+            cboCampo.Items.Add("Descripcion");
         }
 
         private void load()
@@ -172,12 +172,12 @@ namespace TPWinForm
        
         private bool validarFiltro()
         {
-            if (cboBrand.SelectedIndex < 0)
+            if (cboCampo.SelectedIndex < 0)
             {
                 MessageBox.Show("Seleccione una marca");
                 return true;
             }
-            if (cboCategory.SelectedIndex < 0)
+            if (cboCriterio.SelectedIndex < 0)
             {
                 MessageBox.Show("Seleccione una categoria");
                 return true;
@@ -190,12 +190,11 @@ namespace TPWinForm
             ArticleConector art = new ArticleConector();
             try
             {
-                if (validarFiltro())
-                    return;
-                string brand = cboBrand.SelectedItem.ToString();
-                string category = cboCategory.SelectedItem.ToString();
+   
+                string campo = cboCampo.SelectedItem.ToString();
+                string criterio = cboCriterio.SelectedItem.ToString();
                 string filter = txtFiltroAvanzado.Text;
-                dgvPrincipal.DataSource = art.filtrar(brand, category, filter);
+                dgvPrincipal.DataSource = art.filtrar(campo, criterio, filter);
             }
             catch (Exception ex)
             {
@@ -216,22 +215,32 @@ namespace TPWinForm
 
         private void cboBrand_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string opcion = cboBrand.SelectedItem.ToString();
+            string opcion = cboCampo.SelectedItem.ToString();
             if (opcion == "Precio")
             {
-                cboCategory.Items.Clear();
-                cboCategory.Items.Add("Mayor a");
-                cboCategory.Items.Add("Menor a");
-                cboCategory.Items.Add("Igual a");
+                cboCriterio.Items.Clear();
+                cboCriterio.Items.Add("Mayor a");
+                cboCriterio.Items.Add("Menor a");
+                cboCriterio.Items.Add("Igual a");
 
             }
-            else
+            else if (opcion == "Nombre")
             {
-                cboCategory.Items.Clear();
-                cboCategory.Items.Add("Comienza con");
-                cboCategory.Items.Add("Termina con");
-                cboCategory.Items.Add("Contiene");
+                cboCriterio.Items.Clear();
+                cboCriterio.Items.Add("Comienza con");
+                cboCriterio.Items.Add("Termina con");
+                cboCriterio.Items.Add("Contiene");
             }
+        }
+
+        private void cboCriterio_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtFiltroAvanzado_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

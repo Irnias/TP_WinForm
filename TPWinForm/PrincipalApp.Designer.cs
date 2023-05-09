@@ -37,8 +37,8 @@
             this.Delete = new System.Windows.Forms.Button();
             this.lblFilter = new System.Windows.Forms.Label();
             this.txtFilter = new System.Windows.Forms.TextBox();
-            this.cboBrand = new System.Windows.Forms.ComboBox();
-            this.cboCategory = new System.Windows.Forms.ComboBox();
+            this.cboCampo = new System.Windows.Forms.ComboBox();
+            this.cboCriterio = new System.Windows.Forms.ComboBox();
             this.btnAdvancedSearch = new System.Windows.Forms.Button();
             this.lblCampo = new System.Windows.Forms.Label();
             this.lblCriterio = new System.Windows.Forms.Label();
@@ -141,24 +141,25 @@
             this.txtFilter.TabIndex = 8;
             this.txtFilter.TextChanged += new System.EventHandler(this.txtFilter_TextChanged);
             // 
-            // cboBrand
+            // cboCampo
             // 
-            this.cboBrand.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboBrand.FormattingEnabled = true;
-            this.cboBrand.Location = new System.Drawing.Point(55, 236);
-            this.cboBrand.Name = "cboBrand";
-            this.cboBrand.Size = new System.Drawing.Size(100, 21);
-            this.cboBrand.TabIndex = 11;
-            this.cboBrand.SelectedIndexChanged += new System.EventHandler(this.cboBrand_SelectedIndexChanged);
+            this.cboCampo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboCampo.FormattingEnabled = true;
+            this.cboCampo.Location = new System.Drawing.Point(55, 236);
+            this.cboCampo.Name = "cboCampo";
+            this.cboCampo.Size = new System.Drawing.Size(100, 21);
+            this.cboCampo.TabIndex = 11;
+            this.cboCampo.SelectedIndexChanged += new System.EventHandler(this.cboBrand_SelectedIndexChanged);
             // 
-            // cboCategory
+            // cboCriterio
             // 
-            this.cboCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboCategory.FormattingEnabled = true;
-            this.cboCategory.Location = new System.Drawing.Point(212, 236);
-            this.cboCategory.Name = "cboCategory";
-            this.cboCategory.Size = new System.Drawing.Size(99, 21);
-            this.cboCategory.TabIndex = 12;
+            this.cboCriterio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboCriterio.FormattingEnabled = true;
+            this.cboCriterio.Location = new System.Drawing.Point(212, 236);
+            this.cboCriterio.Name = "cboCriterio";
+            this.cboCriterio.Size = new System.Drawing.Size(99, 21);
+            this.cboCriterio.TabIndex = 12;
+            this.cboCriterio.SelectedIndexChanged += new System.EventHandler(this.cboCriterio_SelectedIndexChanged);
             // 
             // btnAdvancedSearch
             // 
@@ -219,6 +220,7 @@
             this.txtFiltroAvanzado.Name = "txtFiltroAvanzado";
             this.txtFiltroAvanzado.Size = new System.Drawing.Size(100, 20);
             this.txtFiltroAvanzado.TabIndex = 19;
+            this.txtFiltroAvanzado.TextChanged += new System.EventHandler(this.txtFiltroAvanzado_TextChanged);
             // 
             // PrincipalApp
             // 
@@ -231,8 +233,8 @@
             this.Controls.Add(this.lblCriterio);
             this.Controls.Add(this.lblCampo);
             this.Controls.Add(this.btnAdvancedSearch);
-            this.Controls.Add(this.cboCategory);
-            this.Controls.Add(this.cboBrand);
+            this.Controls.Add(this.cboCriterio);
+            this.Controls.Add(this.cboCampo);
             this.Controls.Add(this.txtFilter);
             this.Controls.Add(this.lblFilter);
             this.Controls.Add(this.Delete);
@@ -266,8 +268,8 @@
         private System.Windows.Forms.Button Delete;
         private System.Windows.Forms.Label lblFilter;
         private System.Windows.Forms.TextBox txtFilter;
-        private System.Windows.Forms.ComboBox cboBrand;
-        private System.Windows.Forms.ComboBox cboCategory;
+        private System.Windows.Forms.ComboBox cboCampo;
+        private System.Windows.Forms.ComboBox cboCriterio;
         private System.Windows.Forms.Button btnAdvancedSearch;
         private System.Windows.Forms.Label lblCampo;
         private System.Windows.Forms.Label lblCriterio;

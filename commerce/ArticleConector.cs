@@ -119,16 +119,17 @@ namespace domain
                 throw;
             }
         }
-        public List<Article> filtrar(string brand, string category, string filter)
+        public List<Article> filtrar(string campo, string criterio, string filter)
          {
             List<Article> list = new List<Article>();
             DataAccess data = new DataAccess();
             try
             {
-                string consulta = "Select A.Id artId, A.Codigo cod, A.Nombre nombre, A.Descripcion descrip, A.Precio price, M.Descripcion brand, M.Id brandId, C.Descripcion category, C.Id categoryId From ARTICULOS A, MARCAS M, CATEGORIAS C where a.IdCategoria = c.Id and m.Id=a.IdMarca and   ";
+                string consulta = "Select A.Id artId, A.Codigo cod, A.Nombre name, A.Descripcion descrip, A.Precio price, M.Descripcion brand, M.Id brandId, C.Descripcion category, C.Id categoryId From ARTICULOS A, MARCAS M, CATEGORIAS C where A.IdCategoria = A.Id and A.Id = A.IdMarca and   ";
 
-                if (brand == "Precio")
-                    switch (brand)
+                if (campo == "Precio")
+                {
+                    switch (criterio)
                     {
                         case "Mayor a":
                             consulta += "price > " + filter;
@@ -140,9 +141,10 @@ namespace domain
                             consulta += "price = " + filter;
                             break;
                     }
-                else if (category == "Nombre")
+                }
+                else if (campo == "Nombre")
                 {
-                    switch (category)
+                    switch (criterio)
                     {
                         case "Comienza con":
                             consulta += "name like '" + filter + "%'";

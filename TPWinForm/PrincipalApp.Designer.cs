@@ -55,7 +55,7 @@
             this.btnAddArticle.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAddArticle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddArticle.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnAddArticle.Location = new System.Drawing.Point(47, 444);
+            this.btnAddArticle.Location = new System.Drawing.Point(55, 444);
             this.btnAddArticle.Name = "btnAddArticle";
             this.btnAddArticle.Size = new System.Drawing.Size(75, 23);
             this.btnAddArticle.TabIndex = 0;
@@ -101,7 +101,7 @@
             this.btnModArticle.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnModArticle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModArticle.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnModArticle.Location = new System.Drawing.Point(263, 444);
+            this.btnModArticle.Location = new System.Drawing.Point(236, 444);
             this.btnModArticle.Name = "btnModArticle";
             this.btnModArticle.Size = new System.Drawing.Size(75, 23);
             this.btnModArticle.TabIndex = 4;
@@ -116,7 +116,7 @@
             this.Delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Delete.ForeColor = System.Drawing.Color.Black;
             this.Delete.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Delete.Location = new System.Drawing.Point(445, 444);
+            this.Delete.Location = new System.Drawing.Point(420, 444);
             this.Delete.Name = "Delete";
             this.Delete.Size = new System.Drawing.Size(75, 23);
             this.Delete.TabIndex = 5;
@@ -166,7 +166,7 @@
             this.btnAdvancedSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAdvancedSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdvancedSearch.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnAdvancedSearch.Location = new System.Drawing.Point(474, 248);
+            this.btnAdvancedSearch.Location = new System.Drawing.Point(474, 237);
             this.btnAdvancedSearch.Name = "btnAdvancedSearch";
             this.btnAdvancedSearch.Size = new System.Drawing.Size(75, 22);
             this.btnAdvancedSearch.TabIndex = 14;
@@ -207,11 +207,11 @@
             // lblFiltroAvanzado
             // 
             this.lblFiltroAvanzado.AutoSize = true;
-            this.lblFiltroAvanzado.Location = new System.Drawing.Point(333, 239);
+            this.lblFiltroAvanzado.Location = new System.Drawing.Point(333, 240);
             this.lblFiltroAvanzado.Name = "lblFiltroAvanzado";
             this.lblFiltroAvanzado.Size = new System.Drawing.Size(29, 13);
             this.lblFiltroAvanzado.TabIndex = 18;
-            this.lblFiltroAvanzado.Text = "Filtro";
+            this.lblFiltroAvanzado.Text = "Filter\r\n";
             // 
             // txtFiltroAvanzado
             // 

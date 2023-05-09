@@ -156,6 +156,19 @@ namespace domain
                             break;
                     }
                 }
+                else if(category == "Descripcion")
+                    switch (category)
+                    {
+                        case "Que comience con ":
+                            consulta += "A.Descripcion like '" + filter + "%' ";
+                            break;
+                        case "Que contenga ":
+                            consulta += "A.Descripcion like '%" + filter + "%'";
+                            break;
+                        case "Que termine con ":
+                            consulta += "A.Descripcion like '%" + filter + "'";
+                            break;
+                    }
 
                 data.setQuery(consulta);
                 data.execute();

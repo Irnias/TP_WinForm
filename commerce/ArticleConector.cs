@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text.RegularExpressions;
 
 namespace domain
 {
@@ -95,7 +94,6 @@ namespace domain
             }
             catch (Exception ex)
             {
-
                 throw ex;
             }
             finally
@@ -116,7 +114,6 @@ namespace domain
             }
             catch (Exception)
             {
-
                 throw;
             }
         }
@@ -126,7 +123,6 @@ namespace domain
             DataAccess data = new DataAccess();
             try
             {
-
                 string consulta = "Select A.Id as artId, A.Nombre, A.Descripcion as artDescrip, Codigo as artCode, Precio as price, C.Descripcion as category, A.IdCategoria as categoryId, " +
                     "M.Descripcion as brand, A.IdMarca as brandId From ARTICULOS A, CATEGORIAS C, MARCAS M Where C.Id = A.IdCategoria And M.Id = A.IdMarca AND ";
                 if (campo == "Precio")
@@ -187,11 +183,7 @@ namespace domain
 
                 throw ex;
             }
-
         }
-
-    }
-
-    
+    }   
 }
 

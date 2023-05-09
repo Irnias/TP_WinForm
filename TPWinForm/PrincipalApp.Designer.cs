@@ -51,7 +51,7 @@
             // 
             // btnAddArticle
             // 
-            this.btnAddArticle.BackColor = System.Drawing.Color.SkyBlue;
+            this.btnAddArticle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(89)))), ((int)(((byte)(54)))));
             this.btnAddArticle.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAddArticle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddArticle.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -65,6 +65,7 @@
             // 
             // dgvPrincipal
             // 
+            this.dgvPrincipal.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(191)))), ((int)(((byte)(128)))));
             this.dgvPrincipal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPrincipal.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvPrincipal.Location = new System.Drawing.Point(12, 49);
@@ -77,7 +78,7 @@
             // 
             // pbxArticle
             // 
-            this.pbxArticle.BackColor = System.Drawing.Color.White;
+            this.pbxArticle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(191)))), ((int)(((byte)(128)))));
             this.pbxArticle.Location = new System.Drawing.Point(169, 263);
             this.pbxArticle.Name = "pbxArticle";
             this.pbxArticle.Size = new System.Drawing.Size(215, 175);
@@ -97,7 +98,7 @@
             // 
             // btnModArticle
             // 
-            this.btnModArticle.BackColor = System.Drawing.Color.SkyBlue;
+            this.btnModArticle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(89)))), ((int)(((byte)(54)))));
             this.btnModArticle.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnModArticle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModArticle.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -111,7 +112,7 @@
             // 
             // Delete
             // 
-            this.Delete.BackColor = System.Drawing.Color.Red;
+            this.Delete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(89)))), ((int)(((byte)(54)))));
             this.Delete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Delete.ForeColor = System.Drawing.Color.Black;
@@ -127,6 +128,7 @@
             // lblFilter
             // 
             this.lblFilter.AutoSize = true;
+            this.lblFilter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.lblFilter.Location = new System.Drawing.Point(12, 26);
             this.lblFilter.Name = "lblFilter";
             this.lblFilter.Size = new System.Drawing.Size(29, 13);
@@ -135,6 +137,7 @@
             // 
             // txtFilter
             // 
+            this.txtFilter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(191)))), ((int)(((byte)(128)))));
             this.txtFilter.Location = new System.Drawing.Point(47, 23);
             this.txtFilter.Name = "txtFilter";
             this.txtFilter.Size = new System.Drawing.Size(93, 20);
@@ -143,6 +146,7 @@
             // 
             // cboCampo
             // 
+            this.cboCampo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(191)))), ((int)(((byte)(128)))));
             this.cboCampo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboCampo.FormattingEnabled = true;
             this.cboCampo.Location = new System.Drawing.Point(55, 236);
@@ -153,6 +157,7 @@
             // 
             // cboCriterio
             // 
+            this.cboCriterio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(191)))), ((int)(((byte)(128)))));
             this.cboCriterio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboCriterio.FormattingEnabled = true;
             this.cboCriterio.Location = new System.Drawing.Point(212, 236);
@@ -162,7 +167,7 @@
             // 
             // btnAdvancedSearch
             // 
-            this.btnAdvancedSearch.BackColor = System.Drawing.Color.SkyBlue;
+            this.btnAdvancedSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(89)))), ((int)(((byte)(54)))));
             this.btnAdvancedSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAdvancedSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdvancedSearch.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -213,6 +218,7 @@
             // 
             // txtFiltroAvanzado
             // 
+            this.txtFiltroAvanzado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(191)))), ((int)(((byte)(128)))));
             this.txtFiltroAvanzado.Location = new System.Drawing.Point(368, 237);
             this.txtFiltroAvanzado.Name = "txtFiltroAvanzado";
             this.txtFiltroAvanzado.Size = new System.Drawing.Size(100, 20);
@@ -220,7 +226,7 @@
             // 
             // PrincipalApp
             // 
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(554, 471);
             this.Controls.Add(this.txtFiltroAvanzado);

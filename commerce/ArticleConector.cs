@@ -119,45 +119,42 @@ namespace domain
                 throw;
             }
         }
-        public List<Article> filtrar(string brand, string category)
+        public List<Article> filtrar(string brand, string category, string filter)
          {
-        List<Article> list = new List<Article>();
+            List<Article> list = new List<Article>();
             DataAccess data = new DataAccess();
             try
             {
-                string consulta = "SELECT a.ID as artId, a.nombre as name, a.descripcion as artDescrip, a.Codigo as artCode, a.precio as price, c.Descripcion as category, c.Id as categoryId, " +
-                    "m.Descripcion as brand, m.id as brandId, STRING_AGG(i.imagenUrl, ',') AS imagen FROM Articulos a LEFT JOIN Imagenes i ON a.ID = i.idArticulo " +
-                    "LEFT JOIN CATEGORIAS c ON a.IdCategoria = c.Id LEFT JOIN MARCAS m on m.Id = a.IdMarca " +
-                   " GROUP BY a.ID, a.nombre, a.Codigo, a.descripcion, a.precio, c.Descripcion, c.Id,  m.Descripcion, m.Id where ";
-                switch (brand)    
-                { 
-                    case "Samsung":
-                        consulta += "brand like 'Samsung'" ;
-                        break;
-                    case "Sony":
-                        consulta += "brand like 'Sony'";
-                        break;
-                    case "Apple":
-                        consulta += "m.Descripcion like 'Apple'";
-                        break;
-                    case "Huawei":
-                        consulta += "m.Descripcion like 'Huawei'";
-                        break;
-                    case "Motorola":
-                        consulta += "m.Descripcion like 'Motorola'";
-                        break;
-                }
-                switch (category)
+                string consulta = "Select A.Id artId, A.Codigo cod, A.Nombre nombre, A.Descripcion descrip, A.Precio price, M.Descripcion brand, M.Id brandId, C.Descripcion category, C.Id categoryId From ARTICULOS A, MARCAS M, CATEGORIAS C where a.IdCategoria = c.Id and m.Id=a.IdMarca and   ";
+
+                if (brand == "Precio")
+                    switch (brand)
+                    {
+                        case "Mayor a":
+                            consulta += "price > " + filter;
+                            break;
+                        case "Menor A":
+                            consulta += "price < " + filter;
+                            break;
+                        case "Descripcion":
+                            consulta += "price = " + filter;
+                            break;
+                    }
+                else if (category == "Nombre")
                 {
-                    case "Televisores":
-                        consulta += "c.Descripcion like 'Televisores' ";
-                        break;
-                    case "Media":
-                        consulta += "c.Descripcion like 'Media'";
-                        break;
-                    case "Celulares":
-                        consulta += "brand like 'Celulares'" ;
-                        break;
+                    switch (category)
+                    {
+                        case "Comienza con":
+                            consulta += "name like '" + filter + "%'";
+
+                            break;
+                        case "Termina con":
+                            consulta += "name like '%'" + filter + "'";
+                            break;
+                        case "Contiene":
+                            consulta += "name like '%" + filter + "%'";
+                            break;
+                    }
                 }
 
                 data.setQuery(consulta);
@@ -165,20 +162,20 @@ namespace domain
                 while (data.sqlReader.Read())
                 {
                     Article aux = new Article();
-                    aux.ArticleId = (!(data.sqlReader["artId"] is DBNull)) ? (int)data.sqlReader["artId"] : 0;
-                    aux.Name = (!(data.sqlReader["name"] is DBNull)) ? (string)data.sqlReader["name"] : "";
-                    aux.Description = (!(data.sqlReader["artDescrip"] is DBNull)) ? (string)data.sqlReader["artDescrip"] : "";
-                    aux.ArticleCode = (!(data.sqlReader["artCode"] is DBNull)) ? (string)data.sqlReader["artCode"] : "";
-                    aux.Price = (!(data.sqlReader["price"] is DBNull)) ? (decimal)data.sqlReader["price"] : 0;
-                    aux.ArticleCategory = new Category(
-                        (!(data.sqlReader["categoryId"] is DBNull)) ? (int)data.sqlReader["categoryId"] : 0,
-                        (!(data.sqlReader["category"] is DBNull)) ? (string)data.sqlReader["category"] : ""
-                        );
-                    aux.ArticleBrand = new Brand(
-                        (!(data.sqlReader["brandId"] is DBNull)) ? (int)data.sqlReader["brandId"] : 0,
-                        (!(data.sqlReader["brand"] is DBNull)) ? (string)data.sqlReader["brand"] : ""
-                        );
-                    aux.Image = (!(data.sqlReader["imagen"] is DBNull)) ? (string)data.sqlReader["imagen"] : "";
+                    aux.ArticleId = (int)data.sqlReader["artId"];
+                    aux.Price = (int)data.sqlReader["price"];
+                    aux.ArticleCode = (string)data.sqlReader["cod"];
+                    aux.Name = (string)data.sqlReader["name"];
+                    aux.Description = (string)data.sqlReader["descrip"];
+
+                    aux.ArticleBrand = new Brand();
+                    aux.ArticleBrand.Description = (string)data.sqlReader["brand"];
+                    aux.ArticleBrand.Id = (int)data.sqlReader["brandId"];
+
+                    aux.ArticleCategory = new Category();
+                    aux.ArticleCategory.Id = (int)data.sqlReader["categoryId"];
+                    aux.ArticleCategory.Description = (string)data.sqlReader["category"];
+
 
                     list.Add(aux);
                 }
@@ -186,11 +183,10 @@ namespace domain
             }
             catch (Exception ex)
             {
-        
+
                 throw ex;
             }
-        
-        
+
         }
 
     }

@@ -1,7 +1,11 @@
 ﻿namespace domain
 {
     public class Category
-    {
+    {   
+        public Category ()
+        {
+
+        }
         public Category(int Id, string Desc) { 
             Description = Desc;
             this.Id = Id;

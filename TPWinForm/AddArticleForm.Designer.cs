@@ -55,7 +55,6 @@
             // 
             resources.ApplyResources(this.ArticleCode, "ArticleCode");
             this.ArticleCode.Name = "ArticleCode";
-            this.ArticleCode.Click += new System.EventHandler(this.Label1_Click);
             // 
             // txtArticleCode
             // 
@@ -98,7 +97,6 @@
             this.cboBrand.FormattingEnabled = true;
             resources.ApplyResources(this.cboBrand, "cboBrand");
             this.cboBrand.Name = "cboBrand";
-            this.cboBrand.SelectedIndexChanged += new System.EventHandler(this.cboBrand_SelectedIndexChanged);
             // 
             // cboCategory
             // 
@@ -106,7 +104,6 @@
             this.cboCategory.FormattingEnabled = true;
             resources.ApplyResources(this.cboCategory, "cboCategory");
             this.cboCategory.Name = "cboCategory";
-            this.cboCategory.SelectedIndexChanged += new System.EventHandler(this.cboCategory_SelectedIndexChanged);
             // 
             // labelCategory
             // 

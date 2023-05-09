@@ -159,7 +159,6 @@
             this.cboCriterio.Name = "cboCriterio";
             this.cboCriterio.Size = new System.Drawing.Size(99, 21);
             this.cboCriterio.TabIndex = 12;
-            this.cboCriterio.SelectedIndexChanged += new System.EventHandler(this.cboCriterio_SelectedIndexChanged);
             // 
             // btnAdvancedSearch
             // 
@@ -183,7 +182,6 @@
             this.lblCampo.Size = new System.Drawing.Size(40, 13);
             this.lblCampo.TabIndex = 15;
             this.lblCampo.Text = "Campo";
-            this.lblCampo.Click += new System.EventHandler(this.label1_Click);
             // 
             // lblCriterio
             // 
@@ -193,7 +191,6 @@
             this.lblCriterio.Size = new System.Drawing.Size(39, 13);
             this.lblCriterio.TabIndex = 16;
             this.lblCriterio.Text = "Criterio";
-            this.lblCriterio.Click += new System.EventHandler(this.label2_Click);
             // 
             // btnPrevImage
             // 
@@ -220,7 +217,6 @@
             this.txtFiltroAvanzado.Name = "txtFiltroAvanzado";
             this.txtFiltroAvanzado.Size = new System.Drawing.Size(100, 20);
             this.txtFiltroAvanzado.TabIndex = 19;
-            this.txtFiltroAvanzado.TextChanged += new System.EventHandler(this.txtFiltroAvanzado_TextChanged);
             // 
             // PrincipalApp
             // 

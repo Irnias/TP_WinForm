@@ -21,10 +21,6 @@ namespace TPWinForm
             InitializeComponent();
             this.article = article;
         }
-        private void Label1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void AddArticle_Load(object sender, EventArgs e)
         {
@@ -48,7 +44,6 @@ namespace TPWinForm
                     txtArticleDescription.Text = article.Description;
                     txtUrlImage.Text = article.Image;
                     txtArticlePrice.Text = article.Price.ToString();
-                    //cargarimagen(article.Image);
                     cboBrand.SelectedValue = article.ArticleBrand.Id;
                     cboCategory.SelectedValue = article.ArticleCategory.Id;
                 }
@@ -68,13 +63,33 @@ namespace TPWinForm
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            //Article newArt = new Article();
             ArticleConector ArticleListConector = new ArticleConector();
 
             try
             {
                 if (article == null)
                     article = new Article();
+
+                if (string.IsNullOrEmpty(txtArticleName.Text))
+                {
+                    MessageBox.Show("Ingrese Nombre");
+                    return;
+                }
+                if (string.IsNullOrEmpty(txtArticleCode.Text))
+                {
+                    MessageBox.Show("Ingrese Codigo");
+                    return;
+                }
+                if (string.IsNullOrEmpty(txtArticleDescription.Text))
+                {
+                    MessageBox.Show("Ingrese Descripcion");
+                    return;
+                }
+                if (soloNumeros(txtArticlePrice.Text))
+                {
+                    MessageBox.Show("Ingrese Precio");
+                    return;
+                }
 
                 article.Name = txtArticleName.Text;
                 article.Description = txtArticleDescription.Text;
@@ -91,10 +106,10 @@ namespace TPWinForm
                 }
                 else
                 {
-              
-                   int newArtID = (int)ArticleListConector.CreateNewArticle(article);
-                   MessageBox.Show("se agrego el id " + newArtID);
-                   
+
+                    int newArtID = (int)ArticleListConector.CreateNewArticle(article);
+                    MessageBox.Show("se agrego el id " + newArtID);
+
                 }
                 Close();
             }
@@ -105,26 +120,6 @@ namespace TPWinForm
             }
             if (file != null && !(txtUrlImage.Text.ToUpper().Contains("HTTP")))
                 imagenLocal();
-
-        }
-
-        private void cboBrand_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            ArticleConector brand = new ArticleConector();
-            try
-            {
-                //cboBrand.DataSource = Brand.FetchCategories();
-            }
-            catch (Exception ex)
-            {
-
-                MessageBox.Show(ex.ToString());
-            }
-        }
-
-        private void cboCategory_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            //ArticleConector categor;
         }
 
         private void txtUrlImage_Leave(object sender, EventArgs e)
@@ -153,35 +148,32 @@ namespace TPWinForm
             {
                 txtUrlImage.Text = file.FileName;
                 cargarimagen(file.FileName);
-
-                //File.Copy(file.FileName, ConfigurationManager.AppSettings["ArticuloApp"]+ file.SafeFileName);
             }
         }
 
         private void imagenLocal()
         {
-            File.Copy(file.FileName, ConfigurationManager.AppSettings["ArticuloApp"]+ file.SafeFileName);
-
+            File.Copy(file.FileName, ConfigurationManager.AppSettings["ArticuloApp"] + file.SafeFileName);
         }
 
 
         private bool Validaciones()
         {
-            if (txtArticleName.SelectedText == " ")
+            if (txtArticleName.SelectedText == "")
             {
                 MessageBox.Show("Porfavor, agregue un nombre para su articulo");
                 return true;
             }
 
-            if (txtArticleCode.SelectedText == " ") {
-                MessageBox.Show("Porfavor, agruegue un codigo ppara su articulo");
+            if (txtArticleCode.SelectedText == "")
+            {
+                MessageBox.Show("Porfavor, agruegue un codigo para su articulo");
                 return true;
             }
             return false;
         }
         private bool validacionesPrecio(string cadena)
         {
-          
             foreach (char caracter in cadena)
             {
                 if (!(char.IsNumber(caracter)))
@@ -190,21 +182,16 @@ namespace TPWinForm
             return true;
         }
 
-        private bool validarPrecio()
+        private bool soloNumeros(string str)
         {
-            if (string.IsNullOrEmpty(txtArticlePrice.Text))
+            foreach (char c in str)
             {
-                MessageBox.Show("Debes load el precio del producto");
-                return true;
-            }
-            if (!(validacionesPrecio(txtArticlePrice.Text)))
-            {
-                MessageBox.Show("Porfavor, ingrese un precio en NUMEROS");
-                return true;
+                if (!char.IsNumber(c))
+                {
+                    return true;
+                }
             }
             return false;
         }
-      
-
     }
 }

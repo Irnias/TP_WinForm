@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Windows.Forms;
 using domain;
 using commerce;
@@ -115,9 +114,6 @@ namespace TPWinForm
             }
         }
 
-
-
-
         private void Delete_Click(object sender, EventArgs e)
         {
             ArticleConector articulo = new ArticleConector();
@@ -139,10 +135,6 @@ namespace TPWinForm
             }
         }
 
-
-
-
-
         private void txtFilter_TextChanged(object sender, EventArgs e)
         {
             List<Article> FilterList;
@@ -157,19 +149,10 @@ namespace TPWinForm
             {
                 FilterList = listArticle;
             }
-
-
-
             dgvPrincipal.DataSource = null;
             dgvPrincipal.DataSource = FilterList;
             hideColumns();
         }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
 
         private bool validarFiltro()
         {
@@ -233,16 +216,6 @@ namespace TPWinForm
             }
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void cboBrand_SelectedIndexChanged(object sender, EventArgs e)
         {
             string opcion = cboCampo.SelectedItem.ToString();
@@ -261,16 +234,6 @@ namespace TPWinForm
                 cboCriterio.Items.Add("Termina con");
                 cboCriterio.Items.Add("Contiene");
             }
-        }
-
-        private void cboCriterio_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtFiltroAvanzado_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

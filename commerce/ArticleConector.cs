@@ -55,11 +55,12 @@ namespace domain
 
             try
             {
-                dataAcces.setQuery("update Articulos set Codigo = @cod , Nombre = @name, Descripcion = @description, IdMarca = @idMarca, Precio = @price  where Id= @id");
+                dataAcces.setQuery("update Articulos set Codigo = @cod , Nombre = @name, Descripcion = @description, IdMarca = @idMarca, Precio = @price, IdCategoria = @categoria  where Id= @id");
                 dataAcces.setearParametro("@cod", article.ArticleCode);
                 dataAcces.setearParametro("@name", article.Name);
                 dataAcces.setearParametro("@description", article.Description);
                 dataAcces.setearParametro("@idMarca", article.ArticleBrand.Id);
+                dataAcces.setearParametro("@categoria", article.ArticleCategory.Id);
                 dataAcces.setearParametro("@id", article.ArticleId);
                 dataAcces.setearParametro("@price", article.Price);
 
@@ -83,7 +84,7 @@ namespace domain
 
             try
             {
-                string query = "INSERT INTO ARTICULOS (Codigo, Nombre, Descripcion, IdMarca, Precio) OUTPUT Inserted.ID values('" + newArt.ArticleCode + "', '" + newArt.Name + "', '" + newArt.Description +"', " + newArt.ArticleBrand.Id + ", " +newArt.Price + ")";
+                string query = "INSERT INTO ARTICULOS (Codigo, Nombre, Descripcion, IdMarca, IdCategoria, Precio) OUTPUT Inserted.ID values('" + newArt.ArticleCode + "', '" + newArt.Name + "', '" + newArt.Description +"', " + newArt.ArticleBrand.Id + ", " + newArt.ArticleCategory.Id + ", " + newArt.Price + ")";
                 acces.setQuery(query);
                 int newArticleId = (int) acces.executeScalar();
                 acces.ClearQuery();

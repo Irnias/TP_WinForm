@@ -59,7 +59,7 @@
             this.btnAddArticle.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAddArticle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddArticle.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnAddArticle.Location = new System.Drawing.Point(95, 313);
+            this.btnAddArticle.Location = new System.Drawing.Point(827, 83);
             this.btnAddArticle.Name = "btnAddArticle";
             this.btnAddArticle.Size = new System.Drawing.Size(75, 23);
             this.btnAddArticle.TabIndex = 0;
@@ -107,7 +107,7 @@
             this.btnModArticle.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnModArticle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModArticle.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnModArticle.Location = new System.Drawing.Point(247, 313);
+            this.btnModArticle.Location = new System.Drawing.Point(827, 140);
             this.btnModArticle.Name = "btnModArticle";
             this.btnModArticle.Size = new System.Drawing.Size(75, 23);
             this.btnModArticle.TabIndex = 4;
@@ -122,7 +122,7 @@
             this.Delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Delete.ForeColor = System.Drawing.Color.Black;
             this.Delete.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Delete.Location = new System.Drawing.Point(396, 313);
+            this.Delete.Location = new System.Drawing.Point(827, 199);
             this.Delete.Name = "Delete";
             this.Delete.Size = new System.Drawing.Size(75, 23);
             this.Delete.TabIndex = 5;
@@ -262,7 +262,7 @@
             // 
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(121)))), ((int)(((byte)(126)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(804, 361);
+            this.ClientSize = new System.Drawing.Size(934, 311);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtFiltroAvanzado);
@@ -282,8 +282,8 @@
             this.Controls.Add(this.dgvPrincipal);
             this.Controls.Add(this.btnAddArticle);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(820, 400);
-            this.MinimumSize = new System.Drawing.Size(820, 400);
+            this.MaximumSize = new System.Drawing.Size(950, 350);
+            this.MinimumSize = new System.Drawing.Size(950, 350);
             this.Name = "PrincipalApp";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -27,14 +27,9 @@ namespace TPWinForm
         private void LoadPrincipalApp(object sender, EventArgs e)
         {
             load();
-            cboBrand.Items.Add("Sony");
-            cboBrand.Items.Add("Apple");
-            cboBrand.Items.Add("Samsung");
-            cboBrand.Items.Add("Huawei");
-            cboBrand.Items.Add("Motorola");
-            cboCategory.Items.Add("Televisores");
-            cboCategory.Items.Add("Media");
-            cboCategory.Items.Add("Celulares");
+            cboBrand.Items.Add("Precio");
+            cboBrand.Items.Add("Nombre");
+            cboBrand.Items.Add("Descripcion");
         }
 
         private void load()
@@ -199,8 +194,8 @@ namespace TPWinForm
                     return;
                 string brand = cboBrand.SelectedItem.ToString();
                 string category = cboCategory.SelectedItem.ToString();
-                //string filter = txtFilter.Text;
-                dgvPrincipal.DataSource = art.filtrar(brand, category);
+                string filter = txtFiltroAvanzado.Text;
+                dgvPrincipal.DataSource = art.filtrar(brand, category, filter);
             }
             catch (Exception ex)
             {
@@ -219,5 +214,24 @@ namespace TPWinForm
 
         }
 
+        private void cboBrand_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string opcion = cboBrand.SelectedItem.ToString();
+            if (opcion == "Precio")
+            {
+                cboCategory.Items.Clear();
+                cboCategory.Items.Add("Mayor a");
+                cboCategory.Items.Add("Menor a");
+                cboCategory.Items.Add("Igual a");
+
+            }
+            else
+            {
+                cboCategory.Items.Clear();
+                cboCategory.Items.Add("Comienza con");
+                cboCategory.Items.Add("Termina con");
+                cboCategory.Items.Add("Contiene");
+            }
+        }
     }
 }

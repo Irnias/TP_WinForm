@@ -40,9 +40,11 @@
             this.cboBrand = new System.Windows.Forms.ComboBox();
             this.cboCategory = new System.Windows.Forms.ComboBox();
             this.btnAdvancedSearch = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblCampo = new System.Windows.Forms.Label();
+            this.lblCriterio = new System.Windows.Forms.Label();
             this.btnPrevImage = new System.Windows.Forms.Button();
+            this.lblFiltroAvanzado = new System.Windows.Forms.Label();
+            this.txtFiltroAvanzado = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrincipal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxArticle)).BeginInit();
             this.SuspendLayout();
@@ -147,6 +149,7 @@
             this.cboBrand.Name = "cboBrand";
             this.cboBrand.Size = new System.Drawing.Size(100, 21);
             this.cboBrand.TabIndex = 11;
+            this.cboBrand.SelectedIndexChanged += new System.EventHandler(this.cboBrand_SelectedIndexChanged);
             // 
             // cboCategory
             // 
@@ -163,7 +166,7 @@
             this.btnAdvancedSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAdvancedSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdvancedSearch.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnAdvancedSearch.Location = new System.Drawing.Point(458, 22);
+            this.btnAdvancedSearch.Location = new System.Drawing.Point(458, 77);
             this.btnAdvancedSearch.Name = "btnAdvancedSearch";
             this.btnAdvancedSearch.Size = new System.Drawing.Size(75, 22);
             this.btnAdvancedSearch.TabIndex = 14;
@@ -171,25 +174,25 @@
             this.btnAdvancedSearch.UseVisualStyleBackColor = false;
             this.btnAdvancedSearch.Click += new System.EventHandler(this.btnAdvancedSearch_Click);
             // 
-            // label1
+            // lblCampo
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(146, 26);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "Brand";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.lblCampo.AutoSize = true;
+            this.lblCampo.Location = new System.Drawing.Point(146, 26);
+            this.lblCampo.Name = "lblCampo";
+            this.lblCampo.Size = new System.Drawing.Size(40, 13);
+            this.lblCampo.TabIndex = 15;
+            this.lblCampo.Text = "Campo";
+            this.lblCampo.Click += new System.EventHandler(this.label1_Click);
             // 
-            // label2
+            // lblCriterio
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(295, 26);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 13);
-            this.label2.TabIndex = 16;
-            this.label2.Text = "Category";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.lblCriterio.AutoSize = true;
+            this.lblCriterio.Location = new System.Drawing.Point(295, 26);
+            this.lblCriterio.Name = "lblCriterio";
+            this.lblCriterio.Size = new System.Drawing.Size(39, 13);
+            this.lblCriterio.TabIndex = 16;
+            this.lblCriterio.Text = "Criterio";
+            this.lblCriterio.Click += new System.EventHandler(this.label2_Click);
             // 
             // btnPrevImage
             // 
@@ -201,14 +204,32 @@
             this.btnPrevImage.UseVisualStyleBackColor = true;
             this.btnPrevImage.Click += new System.EventHandler(this.btnPrevImage_Click);
             // 
+            // lblFiltroAvanzado
+            // 
+            this.lblFiltroAvanzado.AutoSize = true;
+            this.lblFiltroAvanzado.Location = new System.Drawing.Point(469, 30);
+            this.lblFiltroAvanzado.Name = "lblFiltroAvanzado";
+            this.lblFiltroAvanzado.Size = new System.Drawing.Size(29, 13);
+            this.lblFiltroAvanzado.TabIndex = 18;
+            this.lblFiltroAvanzado.Text = "Filtro";
+            // 
+            // txtFiltroAvanzado
+            // 
+            this.txtFiltroAvanzado.Location = new System.Drawing.Point(458, 47);
+            this.txtFiltroAvanzado.Name = "txtFiltroAvanzado";
+            this.txtFiltroAvanzado.Size = new System.Drawing.Size(100, 20);
+            this.txtFiltroAvanzado.TabIndex = 19;
+            // 
             // PrincipalApp
             // 
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(554, 471);
+            this.Controls.Add(this.txtFiltroAvanzado);
+            this.Controls.Add(this.lblFiltroAvanzado);
             this.Controls.Add(this.btnPrevImage);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblCriterio);
+            this.Controls.Add(this.lblCampo);
             this.Controls.Add(this.btnAdvancedSearch);
             this.Controls.Add(this.cboCategory);
             this.Controls.Add(this.cboBrand);
@@ -248,9 +269,11 @@
         private System.Windows.Forms.ComboBox cboBrand;
         private System.Windows.Forms.ComboBox cboCategory;
         private System.Windows.Forms.Button btnAdvancedSearch;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblCampo;
+        private System.Windows.Forms.Label lblCriterio;
         private System.Windows.Forms.Button btnPrevImage;
+        private System.Windows.Forms.Label lblFiltroAvanzado;
+        private System.Windows.Forms.TextBox txtFiltroAvanzado;
     }
 }
 
